@@ -295,7 +295,7 @@ finisherPresets   =   {
          }
          ELITE   =   {
             healthRestoringPercent   =   100
-            healthRegenPercentByKill   =  10
+            healthRegenPercentByKill   =   5
             isArmorRegenBySegments   =   True
             armorRegenPercentByKill   =   100
             armorRegenModifiers   =   [
@@ -315,14 +315,14 @@ finisherPresets   =   {
          }
          MINIBOSS   =   {
             healthRestoringPercent   =   100
-            healthRegenPercentByKill   =  15
+            healthRegenPercentByKill   =  10
             isArmorRegenBySegments   =   True
             armorRegenPercentByKill   =   400
             __type   =   "DamagePointsRestoringFinisherSettings"
          }
          BOSS   =   {
             healthRestoringPercent   =   100
-            healthRegenPercentByKill   =  20
+            healthRegenPercentByKill   =  10
             isArmorRegenBySegments   =   True
             armorRegenPercentByKill   =   400
             __type   =   "DamagePointsRestoringFinisherSettings"
@@ -396,7 +396,7 @@ finisherPresets   =   {
 }
 healingSettings   =   {
    healingInjector   =   {
-      healthRestoringPercent   =  100
+      healthRestoringPercent   =   99
       restoreTotalTime   =   1
       healSource   =   "INJECTOR"
       __type   =   "DamagePontsRestoringHealingSettings"
