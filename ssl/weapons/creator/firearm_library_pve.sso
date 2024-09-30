@@ -720,8 +720,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.2
-               maxBulletSpread   =   1.7
+               minBulletSpread   =   0.0
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -737,15 +737,15 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     1,
-                     10,
-                     25,
-                     40,
-                     45,
-                     50,
-                     25,
-                     100,
-                     22
+                     0,
+                     00,
+                     00,
+                     00,
+                     00,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -998,8 +998,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.05
-               maxBulletSpread   =   0.5
+               minBulletSpread   =   0.00
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -1015,13 +1015,13 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     1,
-                     20,
-                     80,
-                     80,
-                     90,
-                     100,
-                     85
+                     0,
+                     00,
+                     00,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -1110,8 +1110,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.05
-               maxBulletSpread   =   1.1
+               minBulletSpread   =   0.00
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -1127,13 +1127,13 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     1,
-                     20,
-                     80,
-                     80,
-                     90,
-                     100,
-                     85
+                     0,
+                     00,
+                     00,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -1433,8 +1433,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.05
-               maxBulletSpread   =   1.1
+               minBulletSpread   =   0.00
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -1450,13 +1450,13 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     1,
-                     35,
-                     35,
-                     65,
-                     36,
-                     100,
-                     33
+                     0,
+                     00,
+                     00,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -1759,8 +1759,8 @@ firearms   =   {
             }
             spreadSettings   =   {
                sslModule   =   "weapons.properties.spread.spread_controller_settings"
-               minBulletSpread   =   0.07
-               maxBulletSpread   =   1.2
+               minBulletSpread   =   0.00
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   sslModule   =   "player.abilities.energy.energy_desc"
                   type   =   {
@@ -1780,15 +1780,15 @@ firearms   =   {
                   sslModule   =   "math.spline_1d"
                   spline   =   [
                      0,
-                     1,
-                     11,
-                     45,
-                     33,
-                     55,
-                     60,
-                     45,
-                     100,
-                     35
+                     0,
+                     00,
+                     00,
+                     00,
+                     00,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -1925,8 +1925,8 @@ firearms   =   {
             }
             spreadSettings   =   {
                sslModule   =   "weapons.properties.spread.spread_controller_settings"
-               minBulletSpread   =   0.07
-               maxBulletSpread   =   1
+               minBulletSpread   =   0.00
+               maxBulletSpread   =   0
                spreadEnergyDesc   =   {
                   sslModule   =   "player.abilities.energy.energy_desc"
                   type   =   {
@@ -1946,15 +1946,15 @@ firearms   =   {
                   sslModule   =   "math.spline_1d"
                   spline   =   [
                      0,
-                     1,
-                     11,
-                     45,
-                     33,
-                     55,
-                     60,
-                     45,
-                     100,
-                     35
+                     0,
+                     00,
+                     00,
+                     00,
+                     00,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -2227,8 +2227,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.01
-               maxBulletSpread   =   0.01
+               minBulletSpread   =   0.00
+               maxBulletSpread   =   0.00
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -2246,10 +2246,10 @@ firearms   =   {
                   spline   =   [
                      0,
                      0,
-                     55,
-                     75,
-                     100,
-                     55
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -2544,8 +2544,8 @@ firearms   =   {
             }
             spreadSettings   =   {
                sslModule   =   "weapons.properties.spread.spread_controller_settings"
-               minBulletSpread   =   0.3
-               maxBulletSpread   =   2.5
+               minBulletSpread   =   0.0
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   sslModule   =   "player.abilities.energy.energy_desc"
                   type   =   {
@@ -2565,13 +2565,13 @@ firearms   =   {
                   sslModule   =   "math.spline_1d"
                   spline   =   [
                      0,
-                     1,
-                     20,
-                     17,
-                     50,
-                     27.5,
-                     100,
-                     22
+                     0,
+                     00,
+                     00,
+                     00,
+                     00.0,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -2862,8 +2862,8 @@ firearms   =   {
             }
             spreadSettings   =   {
                sslModule   =   "weapons.properties.spread.spread_controller_settings"
-               minBulletSpread   =   0.25
-               maxBulletSpread   =   2.3
+               minBulletSpread   =   0.00
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   sslModule   =   "player.abilities.energy.energy_desc"
                   type   =   {
@@ -2883,13 +2883,13 @@ firearms   =   {
                   sslModule   =   "math.spline_1d"
                   spline   =   [
                      0,
-                     1,
-                     20,
-                     22.5,
-                     60,
-                     27.5,
-                     100,
-                     25
+                     0,
+                     00,
+                     00.0,
+                     00,
+                     00.0,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -3230,8 +3230,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.1
-               maxBulletSpread   =   1.2
+               minBulletSpread   =   0.0
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -3248,13 +3248,13 @@ firearms   =   {
                   sslModule   =   "math.spline_1d"
                   spline   =   [
                      0,
-                     100,
-                     45,
-                     100,
-                     80,
-                     100,
-                     100,
-                     100
+                     000,
+                     00,
+                     000,
+                     00,
+                     000,
+                     000,
+                     000
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -3378,8 +3378,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.1
-               maxBulletSpread   =   1.6
+               minBulletSpread   =   0.0
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -3395,11 +3395,11 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     100,
-                     55,
-                     100,
-                     100,
-                     100
+                     000,
+                     00,
+                     000,
+                     000,
+                     000
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -3942,8 +3942,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.15
-               maxBulletSpread   =   1.6
+               minBulletSpread   =   0.00
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -3959,13 +3959,13 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     1,
-                     30,
-                     37.5,
-                     60,
-                     45,
-                     100,
-                     40
+                     0,
+                     00,
+                     00.0,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -4255,8 +4255,8 @@ firearms   =   {
             }
             spreadSettings   =   {
                sslModule   =   "weapons.properties.spread.spread_controller_settings"
-               minBulletSpread   =   0.01
-               maxBulletSpread   =   1.2
+               minBulletSpread   =   0.00
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   sslModule   =   "player.abilities.energy.energy_desc"
                   type   =   {
@@ -4276,13 +4276,13 @@ firearms   =   {
                   sslModule   =   "math.spline_1d"
                   spline   =   [
                      0,
-                     1,
-                     20,
-                     30,
-                     65,
-                     70,
-                     100,
-                     50
+                     0,
+                     00,
+                     00,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -4633,8 +4633,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.1
-               maxBulletSpread   =   1
+               minBulletSpread   =   0.0
+               maxBulletSpread   =   0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -4650,15 +4650,15 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     100,
-                     30,
-                     100,
-                     45,
-                     100,
-                     70,
-                     100,
-                     100,
-                     100
+                     000,
+                     00,
+                     000,
+                     00,
+                     000,
+                     00,
+                     000,
+                     000,
+                     000
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -4790,8 +4790,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.1
-               maxBulletSpread   =   1.4
+               minBulletSpread   =   0.0
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -4807,13 +4807,13 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     100,
-                     45,
-                     100,
-                     70,
-                     100,
-                     100,
-                     100
+                     000,
+                     00,
+                     000,
+                     00,
+                     000,
+                     000,
+                     000
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -4921,8 +4921,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.15
-               maxBulletSpread   =   1.6
+               minBulletSpread   =   0.00
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -4938,13 +4938,13 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     1,
-                     30,
-                     37.5,
-                     60,
-                     45,
-                     100,
-                     40
+                     0,
+                     00,
+                     00.0,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -5240,8 +5240,8 @@ firearms   =   {
             }
             spreadSettings   =   {
                sslModule   =   "weapons.properties.spread.spread_controller_settings"
-               minBulletSpread   =   0.2
-               maxBulletSpread   =   2.1
+               minBulletSpread   =   0.0
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   sslModule   =   "player.abilities.energy.energy_desc"
                   type   =   {
@@ -5261,13 +5261,13 @@ firearms   =   {
                   sslModule   =   "math.spline_1d"
                   spline   =   [
                      0,
-                     1,
-                     20,
-                     17,
-                     50,
-                     27.5,
-                     100,
-                     22
+                     0,
+                     00,
+                     00,
+                     00,
+                     00.0,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -5513,8 +5513,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   2
-               maxBulletSpread   =   4
+               minBulletSpread   =   0
+               maxBulletSpread   =   0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -5530,13 +5530,13 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     1,
-                     25,
-                     27,
-                     70,
-                     40,
-                     100,
-                     32.5
+                     0,
+                     00,
+                     00,
+                     00,
+                     00,
+                     000,
+                     00.0
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -5686,8 +5686,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.7
-               maxBulletSpread   =   2.7
+               minBulletSpread   =   0.0
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -5704,13 +5704,13 @@ firearms   =   {
                   sslModule   =   "math.spline_1d"
                   spline   =   [
                      0,
-                     1,
-                     15,
-                     18,
-                     80,
-                     21,
-                     100,
-                     20
+                     0,
+                     00,
+                     00,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -5947,8 +5947,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   1
-               maxBulletSpread   =   2.8
+               minBulletSpread   =   0
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -5964,11 +5964,11 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     1,
-                     60,
-                     60,
-                     100,
-                     50
+                     0,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -6072,7 +6072,7 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.3
+               minBulletSpread   =   0.0
                maxBulletSpread   =   1
                spreadEnergyDesc   =   {
                   type   =   {
@@ -6089,11 +6089,11 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     1,
-                     60,
-                     60,
-                     100,
-                     50
+                     0,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -6326,10 +6326,10 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minSpreadAngle   =   3.5
-               maxSpreadAngle   =   4.5
-               minBulletSpread   =   0.3
-               maxBulletSpread   =   0.65
+               minSpreadAngle   =   0.0
+               maxSpreadAngle   =   0.0
+               minBulletSpread   =   0.0
+               maxBulletSpread   =   0.00
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -6347,11 +6347,11 @@ firearms   =   {
                      0,
                      0,
                      0,
-                     1,
-                     65,
-                     85,
-                     100,
-                     45
+                     0,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -6578,8 +6578,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.01
-               maxBulletSpread   =   0.01
+               minBulletSpread   =   0.00
+               maxBulletSpread   =   0.00
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -6597,10 +6597,10 @@ firearms   =   {
                   spline   =   [
                      0,
                      0,
-                     55,
-                     75,
-                     100,
-                     55
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -13013,7 +13013,7 @@ firearms   =   {
             }
             spreadSettings   =   {
                minBulletSpread   =   0
-               maxBulletSpread   =   1.6
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -13029,11 +13029,11 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     100,
-                     55,
-                     100,
-                     100,
-                     100
+                     000,
+                     00,
+                     000,
+                     000,
+                     000
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -13159,7 +13159,7 @@ firearms   =   {
             }
             spreadSettings   =   {
                minBulletSpread   =   0
-               maxBulletSpread   =   2
+               maxBulletSpread   =   0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -13175,11 +13175,11 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     100,
-                     55,
-                     100,
-                     100,
-                     100
+                     000,
+                     00,
+                     000,
+                     000,
+                     000
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -13309,7 +13309,7 @@ firearms   =   {
             }
             spreadSettings   =   {
                minBulletSpread   =   0
-               maxBulletSpread   =   1.6
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -13325,11 +13325,11 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     100,
-                     55,
-                     100,
-                     100,
-                     100
+                     000,
+                     00,
+                     000,
+                     000,
+                     000
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -13455,7 +13455,7 @@ firearms   =   {
             }
             spreadSettings   =   {
                minBulletSpread   =   0
-               maxBulletSpread   =   2
+               maxBulletSpread   =   0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -13471,11 +13471,11 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     100,
-                     55,
-                     100,
-                     100,
-                     100
+                     000,
+                     00,
+                     000,
+                     000,
+                     000
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -14706,8 +14706,8 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minBulletSpread   =   0.1
-               maxBulletSpread   =   1.7
+               minBulletSpread   =   0.0
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
@@ -14723,13 +14723,13 @@ firearms   =   {
                spreadSpline   =   {
                   spline   =   [
                      0,
-                     1,
-                     25,
-                     30,
-                     55,
-                     33,
-                     100,
-                     26
+                     0,
+                     00,
+                     00,
+                     00,
+                     00,
+                     000,
+                     00
                   ]
                   __type   =   "SplineLinear1d"
                }
@@ -14869,15 +14869,15 @@ firearms   =   {
                __type   =   "RecoilSettings"
             }
             spreadSettings   =   {
-               minSpreadAngle   =   1
-               maxSpreadAngle   =   1
+               minSpreadAngle   =   0
+               maxSpreadAngle   =   0
                multishotLoadParameters   =   [
                   {
                      sprdAnglePart   =   4
                   }
                ]
-               minBulletSpread   =   0.4
-               maxBulletSpread   =   0.7
+               minBulletSpread   =   0.0
+               maxBulletSpread   =   0.0
                spreadEnergyDesc   =   {
                   type   =   {
                      energyRegenerationRules   =   {
