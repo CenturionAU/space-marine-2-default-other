@@ -19,9 +19,11 @@ Modification of local files is not supported by Saber Interactive and doing so c
 
 ~ssl/weapons/creator/firearm_library_pve.sso
 - All player ranged weapons have had their spread reduced to 0.
+- All player ranged weapons have had their damage increased by 100%.
 
 ~ssl/weapons/melee/weapon_descriptions/melee_weapon_descs/
-- All player melee weapons have had the delay between attack removed, meaning all player melee weapons 
+- All player melee weapons have had the delay between attacks removed, meaning all player melee weapons 
 now attack faster.
     - The speed of the individual attacks themselves remain the same but the player character no longer
     has a small delay in between each swing.
+- All player melee weapons have had their damage increased by 100%.
