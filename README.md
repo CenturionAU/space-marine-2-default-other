@@ -1,5 +1,4 @@
-# space-marine-2-default-other
-
+# README.md
 ## Client-side SSL Modification of Space Marine 2 PVE
 All rights to Space Marine 2's developer, Saber Interactive, I am simply modifying the .sso files 
 according to my preferences.
@@ -28,7 +27,7 @@ within a weapon's perk tree assuming there are enough perk points.
     - Miniboss enemies restore 15% health.
     - Boss enemies restore 20% health.
 
-##### Changelog Table
+#### Changelog Table
 | Line | Variable | Original Value | Previous Modified Value | Modified Value |
 |------|----------|----------------|-------------------------|----------------|
 | 399 | healthRestoringPercent | 35 |   | 100 |
@@ -45,3 +44,10 @@ within a weapon's perk tree assuming there are enough perk points.
 
 #### Changelogs
 - All ranged weapons have had their spread reduced to 0.
+
+### Changelog Table
+| Line | Variable | Original Value | Previous Modified Value | Modified Value |
+|------|----------|----------------|-------------------------|----------------|
+| 153 | minBulletSpread | 0.22 |   | 0.00 |
+| 154 | maxBulletSpread | 2.1 |   | 0.0 |
+| 168 | spline | 0, 1, 30, 25, 60, 28, 100, 22 |   | 0, 0, 00, 00, 00, 00, 000, 00 |
