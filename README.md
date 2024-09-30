@@ -28,13 +28,13 @@ within a weapon's perk tree assuming there are enough perk points.
     - Boss enemies restore 20% health.
 
 #### Changelog Table
-| Line | Variable | Original Value | Previous Modified Value | Modified Value |
-|------|----------|----------------|-------------------------|----------------|
-| 399      | healthRestoringPercent   | 35 |   | 100 |
-| 291      | healthRegenPercentByKill |  0 |   |   5 |
-| 298, 308 | healthRegenPercentByKill |  0 |   |  10 |
-| 318      | healthRegenPercentByKill |  0 |   |  15 |
-| 325      | healthRegenPercentByKill |  0 |   |  20 |
+| Line | Variable | Original Value | Modified Value |
+|------|----------|----------------|----------------|
+| 399      | healthRestoringPercent   | 35 | 100 |
+| 291      | healthRegenPercentByKill |  0 |   5 |
+| 298, 308 | healthRegenPercentByKill |  0 |  10 |
+| 318      | healthRegenPercentByKill |  0 |  15 |
+| 325      | healthRegenPercentByKill |  0 |  20 |
 
 ---
 
@@ -45,8 +45,8 @@ within a weapon's perk tree assuming there are enough perk points.
 - All ranged weapons have had their spread reduced to 0.
 
 ### Changelog Table
-| Line | Variable | Original Value | Previous Modified Value | Modified Value |
-|------|----------|----------------|-------------------------|----------------|
-| 153, 439, 723, 1001, 1113, 1436, 1762 | minBulletSpread |   |   | 0 |
-| 154, 440, 724, 1002, 1114, 1437, 1763 | maxBulletSpread |   |   | 0 |
-| 168, 454, 738, 1016, 1128, 1451, 1781 | spline          |   |   | 0 |
+| Line | Variable | Modified Value |
+|------|----------|----------------|
+| 153, 439, 723, 1001, 1113, 1436, 1762 | minBulletSpread | 0 |
+| 154, 440, 724, 1002, 1114, 1437, 1763 | maxBulletSpread | 0 |
+| 168, 454, 738, 1016, 1128, 1451, 1781 | spline          | 0 |
