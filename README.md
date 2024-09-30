@@ -30,12 +30,11 @@ within a weapon's perk tree assuming there are enough perk points.
 #### Changelog Table
 | Line | Variable | Original Value | Previous Modified Value | Modified Value |
 |------|----------|----------------|-------------------------|----------------|
-| 399 | healthRestoringPercent | 35 |   | 100 |
-| 291 | healthRegenPercentByKill | 0 |   | 5 |
-| 298 | healthRegenPercentByKill | 0 |   | 10 |
-| 308 | healthRegenPercentByKill | 0 |   | 10 |
-| 318 | healthRegenPercentByKill | 0 |   | 15 |
-| 325 | healthRegenPercentByKill | 0 |   | 20 |
+| 399      | healthRestoringPercent   | 35 |   | 100 |
+| 291      | healthRegenPercentByKill |  0 |   |   5 |
+| 298, 308 | healthRegenPercentByKill |  0 |   |  10 |
+| 318      | healthRegenPercentByKill |  0 |   |  15 |
+| 325      | healthRegenPercentByKill |  0 |   |  20 |
 
 ---
 
@@ -48,6 +47,6 @@ within a weapon's perk tree assuming there are enough perk points.
 ### Changelog Table
 | Line | Variable | Original Value | Previous Modified Value | Modified Value |
 |------|----------|----------------|-------------------------|----------------|
-| 153 | minBulletSpread | 0.22 |   | 0.00 |
-| 154 | maxBulletSpread | 2.1 |   | 0.0 |
-| 168 | spline | 0, 1, 30, 25, 60, 28, 100, 22 |   | 0, 0, 00, 00, 00, 00, 000, 00 |
+| 153, 439, 723, 1001, 1113, 1436, 1762 | minBulletSpread |   |   | 0 |
+| 154, 440, 724, 1002, 1114, 1437, 1763 | maxBulletSpread |   |   | 0 |
+| 168, 454, 738, 1016, 1128, 1451, 1781 | spline          |   |   | 0 |
