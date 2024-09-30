@@ -191,7 +191,7 @@ comboDesc   =   {
    }
    slowdownSettings   =   {
       sslModule   =   "weapons.melee.weapon_descriptions.melee_combo_slowdown_settings"
-      slowdownTime   =   0.231
+      slowdownTime   =   0.000
       slowdownDesc   =   {
          type   =   {
             __type   =   "MeleeComboSlowdownProject"
