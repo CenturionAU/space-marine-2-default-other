@@ -13,7 +13,7 @@ An initial modification of ~ssl/main/user/progressiona/weapons_mastery/perks/wea
 by @RumpleForskin is included which removes the perk exclusivity lockouts, allowing the selection of all perks 
 within a weapon's perk tree assuming there are enough perk points.
 
-***
+---
 
 ### Health Restoration
 ~ssl/damage/damagable/damage_points_restoring/damagable_health_restoring_library_pve.sso
@@ -37,7 +37,7 @@ within a weapon's perk tree assuming there are enough perk points.
 | 318 | healthRegenPercentByKill | 0 |   | 15 |
 | 325 | healthRegenPercentByKill | 0 |   | 20 |
 
-___
+---
 
 ### Ranged Weapons
 ~ssl/weapons/creator/fire_library_pve.sso
