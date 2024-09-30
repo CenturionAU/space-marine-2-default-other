@@ -20,7 +20,8 @@ You will need to source your own EAC bypass.
 6. Download the latest release from this GitHub repo.
 7. Open the zip file using WinRAR.
 8. Drag the ssl folder from the downloaded .zip into default_other.pak.
-9. Select OK.  
+9. Select OK.
+
 Enjoy your new values.
 ---
 
