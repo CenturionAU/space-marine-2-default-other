@@ -7,8 +7,25 @@ Modification of local files is not supported by Saber Interactive and doing so c
 
 ---
 
+### Installation Instructions
+Big thanks to MegaDux for sharing the method.  
+You will need to source your own EAC bypass.
+1. Download WinRAR, if you don't have it.
+2. Right click Space Marine 2 on Steam > Manage > Browse local files.
+3. Navigate to client_pc/root/paks/client/default/
+4. Open default_other.pak using WinRAR.
+5. At the top of WinRAR, select Options > Settings > Compression > Create default...
+    a. Change 'Compression method' to 'Store' using the drop down.
+    b. Select OK > OK.
+6. Download the latest release from this GitHub repo.
+7. Open the zip file using WinRAR.
+8. Drag the ssl folder from the downloaded .zip into default_other.pak.
+9. Select OK.
+Enjoy your new values.
+---
+
 ### Changelogs
-#### 30-Sep-2024
+#### v1.0.0
 ~ssl/damage/damagable/damage_points_restoring/damagable_health_restoring_library_pve.sso
 - Health injectors now fully restore the player's health.
 - Executions now restore a small amount of player health, regardless of player contested health.
