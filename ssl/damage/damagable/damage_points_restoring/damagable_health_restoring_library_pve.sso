@@ -1,0 +1,455 @@
+meleePresets   =   {
+   default   =   {
+      perDamageStrikeUids   =   [
+         "JetpackAir1",
+         "JetpackLand1"
+      ]
+      settingsCollection   =   {
+         COMMON   =   {
+            settings   =   {
+               LIGHT_TAP   =   {
+                  healthRestoringPercent   =   1
+                  healthRestoringMin   =   1
+                  regenHealthMax   =   1
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               LIGHT_HOLD   =   {
+                  healthRestoringPercent   =   1.5
+                  healthRestoringMin   =   1.5
+                  regenHealthMax   =   1.5
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_TAP   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_HOLD   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+            }
+            __type   =   "DamagePointsRestoringMeleeSettingsCollection"
+         }
+         ELITE   =   {
+            settings   =   {
+               LIGHT_TAP   =   {
+                  healthRestoringPercent   =   10
+                  healthRestoringMin   =   1
+                  regenHealthMax   =   1
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               LIGHT_HOLD   =   {
+                  healthRestoringPercent   =   10
+                  healthRestoringMin   =   1.5
+                  regenHealthMax   =   1.5
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_TAP   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_HOLD   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+            }
+            __type   =   "DamagePointsRestoringMeleeSettingsCollection"
+         }
+         SPECIAL   =   {
+            settings   =   {
+               LIGHT_TAP   =   {
+                  healthRestoringPercent   =   1
+                  healthRestoringMin   =   1
+                  regenHealthMax   =   1
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               LIGHT_HOLD   =   {
+                  healthRestoringPercent   =   1.5
+                  healthRestoringMin   =   1.5
+                  regenHealthMax   =   1.5
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_TAP   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_HOLD   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+            }
+            __type   =   "DamagePointsRestoringMeleeSettingsCollection"
+         }
+         MINIBOSS   =   {
+            settings   =   {
+               LIGHT_TAP   =   {
+                  healthRestoringPercent   =   1
+                  healthRestoringMin   =   1
+                  regenHealthMax   =   1
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               LIGHT_HOLD   =   {
+                  healthRestoringPercent   =   1.5
+                  healthRestoringMin   =   1.5
+                  regenHealthMax   =   1.5
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_TAP   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_HOLD   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+            }
+            __type   =   "DamagePointsRestoringMeleeSettingsCollection"
+         }
+         BOSS   =   {
+            settings   =   {
+               LIGHT_TAP   =   {
+                  healthRestoringPercent   =   1
+                  healthRestoringMin   =   1
+                  regenHealthMax   =   1
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               LIGHT_HOLD   =   {
+                  healthRestoringPercent   =   1.5
+                  healthRestoringMin   =   1.5
+                  regenHealthMax   =   1.5
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_TAP   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_HOLD   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+            }
+            __type   =   "DamagePointsRestoringMeleeSettingsCollection"
+         }
+         FODDER   =   {
+            settings   =   {
+               LIGHT_TAP   =   {
+                  healthRestoringPercent   =   1
+                  healthRestoringMin   =   1
+                  regenHealthMax   =   1
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               LIGHT_HOLD   =   {
+                  healthRestoringPercent   =   1.5
+                  healthRestoringMin   =   1.5
+                  regenHealthMax   =   1.5
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_TAP   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+               HEAVY_HOLD   =   {
+                  armorRegenPercentByHit   =   0
+                  regenArmorMax   =   0
+                  __type   =   "DamagePointsRestoringMeleeSettings"
+               }
+            }
+            __type   =   "DamagePointsRestoringMeleeSettingsCollection"
+         }
+      }
+      __type   =   "DamagePointsRestoringMeleePresetPve"
+   }
+}
+firearmPresets   =   {
+   default   =   {
+      settings   =   {
+         COMMON   =   {
+            healthRestoringPercent   =   3
+            healthRestoringMin   =   0.1
+            healthRegenPercentByKill   =   0
+            armorRegenPercentByKill   =   0
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+         ELITE   =   {
+            healthRestoringPercent   =   10
+            healthRestoringMin   =   0.25
+            healthRegenPercentByKill   =   0
+            armorRegenPercentByKill   =   0
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+         SPECIAL   =   {
+            healthRestoringPercent   =   10
+            healthRestoringMin   =   0.4
+            healthRegenPercentByKill   =   0
+            armorRegenPercentByKill   =   0
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+         MINIBOSS   =   {
+            healthRestoringPercent   =   20
+            healthRestoringMin   =   0.5
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+         BOSS   =   {
+            healthRestoringPercent   =   20
+            healthRestoringMin   =   0.5
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+         FODDER   =   {
+            healthRestoringPercent   =   3
+            healthRestoringMin   =   0.1
+            armorRegenPercentByKill   =   0
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+      }
+      __type   =   "DamagePointsRestoringFirearmPresetPve"
+   }
+   flamer   =   {
+      firearmUids   =   [
+         "hwpn_heavy_flamer"
+      ]
+      settings   =   {
+         COMMON   =   {
+            healthRestoringPercent   =   1
+            healthRestoringMin   =   0.1
+            shouldRestoreByDamage   =   True
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+         ELITE   =   {
+            healthRestoringPercent   =   1
+            healthRestoringMin   =   0.1
+            shouldRestoreByDamage   =   True
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+         SPECIAL   =   {
+            healthRestoringPercent   =   1
+            healthRestoringMin   =   0.1
+            shouldRestoreByDamage   =   True
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+         MINIBOSS   =   {
+            healthRestoringPercent   =   1
+            healthRestoringMin   =   0.1
+            shouldRestoreByDamage   =   True
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+         BOSS   =   {
+            healthRestoringPercent   =   1
+            healthRestoringMin   =   0.1
+            shouldRestoreByDamage   =   True
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+         FODDER   =   {
+            healthRestoringPercent   =   1
+            healthRestoringMin   =   0.1
+            shouldRestoreByDamage   =   True
+            healthRegenPercentByHeadshotKill   =   0
+            armorRegenPercentByHeadshotHit   =   0
+            __type   =   "DamagePointsRestoringFirearmSettings"
+         }
+      }
+      __type   =   "DamagePointsRestoringFirearmPresetPve"
+   }
+}
+finisherPresets   =   {
+   default   =   {
+      meleeSettings   =   {
+         COMMON   =   {
+            healthRestoringPercent   =   100
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   100
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+         ELITE   =   {
+            healthRestoringPercent   =   100
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   100
+            armorRegenModifiers   =   [
+               "ARMOR_REGEN_BY_FINISHER_ELITE"
+            ]
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+         SPECIAL   =   {
+            healthRestoringPercent   =   100
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   100
+            armorRegenModifiers   =   [
+               "ARMOR_REGEN_BY_FINISHER_SPECIAL"
+            ]
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+         MINIBOSS   =   {
+            healthRestoringPercent   =   100
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   400
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+         BOSS   =   {
+            healthRestoringPercent   =   100
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   400
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+         FODDER   =   {
+            healthRestoringPercent   =   100
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   100
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+      }
+      rangedSettings   =   {
+         COMMON   =   {
+            healthRestoringPercent   =   50
+            healthRestoringMin   =   0.1
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   100
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+         ELITE   =   {
+            healthRestoringPercent   =   100
+            healthRestoringMin   =   0.5
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   100
+            armorRegenModifiers   =   [
+               "ARMOR_REGEN_BY_FINISHER_ELITE"
+            ]
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+         SPECIAL   =   {
+            healthRestoringPercent   =   100
+            healthRestoringMin   =   1
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   100
+            armorRegenModifiers   =   [
+               "ARMOR_REGEN_BY_FINISHER_SPECIAL"
+            ]
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+         MINIBOSS   =   {
+            healthRestoringPercent   =   100
+            healthRestoringMin   =   1
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   400
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+         BOSS   =   {
+            healthRestoringPercent   =   100
+            healthRestoringMin   =   1
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   400
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+         FODDER   =   {
+            healthRestoringPercent   =   50
+            healthRestoringMin   =   0.1
+            healthRegenPercentByKill   =   0
+            isArmorRegenBySegments   =   True
+            armorRegenPercentByKill   =   100
+            __type   =   "DamagePointsRestoringFinisherSettings"
+         }
+      }
+      __type   =   "DamagePointsRestoringFinisherPresetPve"
+   }
+}
+healingSettings   =   {
+   healingInjector   =   {
+      healthRestoringPercent   =   35
+      restoreTotalTime   =   1
+      healSource   =   "INJECTOR"
+      __type   =   "DamagePontsRestoringHealingSettings"
+   }
+   RageHealing   =   {
+      healthRestoringPercent   =   25
+      addContestedHealthPercent   =   0
+      isInstant   =   False
+      restoreTotalTime   =   9
+      healSource   =   "ABILITIES"
+      __type   =   "DamagePontsRestoringHealingSettings"
+   }
+   RageHealing2   =   {
+      healthRestoringPercent   =   5
+      addContestedHealthPercent   =   0
+      isInstant   =   False
+      restoreTotalTime   =   1
+      healSource   =   "ABILITIES"
+      __type   =   "DamagePontsRestoringHealingSettings"
+   }
+}
+riposteSettings   =   {
+   COMMON   =   {
+      isArmorRegenBySegments   =   True
+      armorRegenPercentByKill   =   100
+      armorRegenModifiers   =   [
+         "ARMOR_REGEN_BY_FINISHER_COMMON"
+      ]
+      isRegenArmorMaxBySegments   =   True
+      regenArmorMax   =   100
+      __type   =   "DamagePointsRestoringMeleeSettings"
+   }
+   ELITE   =   {
+      __type   =   "DamagePointsRestoringMeleeSettings"
+   }
+   SPECIAL   =   {
+      __type   =   "DamagePointsRestoringMeleeSettings"
+   }
+   MINIBOSS   =   {
+      __type   =   "DamagePointsRestoringMeleeSettings"
+   }
+   BOSS   =   {
+      __type   =   "DamagePointsRestoringMeleeSettings"
+   }
+   FODDER   =   {
+      isArmorRegenBySegments   =   True
+      armorRegenPercentByKill   =   100
+      armorRegenModifiers   =   [
+         "ARMOR_REGEN_BY_FINISHER_FODDER"
+      ]
+      isRegenArmorMaxBySegments   =   True
+      regenArmorMax   =   100
+      __type   =   "DamagePointsRestoringMeleeSettings"
+   }
+}
+__type   =   "DamagableHealthRestoringLibrary"

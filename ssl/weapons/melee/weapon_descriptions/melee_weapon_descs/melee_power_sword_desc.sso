@@ -1,0 +1,4916 @@
+sslModule   =   "weapons.melee.weapon_descriptions.melee_weapon_desc"
+ownerTplName   =   "cc_titus"
+weaponType   =   "POWERSWORD"
+weaponActorUid   =   "power_sword"
+healthDamage   =   10
+morphemeWeaponType   =   4
+meleeDetectorSettings   =   {
+   RightHand   =   {
+      sslModule   =   "weapons.melee.melee_detector_settings"
+      rootTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         __type   =   "Vector3d"
+      }
+      rootTrackerLocator   =   "GUN_R"
+      endTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         z   =   2
+         __type   =   "Vector3d"
+      }
+      endTrackerLocator   =   "GUN_R"
+      staticCheckEndOffset   =   -1.3
+      __type   =   "MeleeDetectorSettings"
+   }
+   LongRightHand   =   {
+      sslModule   =   "weapons.melee.melee_detector_settings"
+      rootTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         __type   =   "Vector3d"
+      }
+      rootTrackerLocator   =   "GUN_R"
+      endTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         z   =   3
+         __type   =   "Vector3d"
+      }
+      endTrackerLocator   =   "GUN_R"
+      staticCheckEndOffset   =   -1.4
+      __type   =   "MeleeDetectorSettings"
+   }
+   LeftHand   =   {
+      sslModule   =   "weapons.melee.melee_detector_settings"
+      rootTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         __type   =   "Vector3d"
+      }
+      rootTrackerLocator   =   "ARM2L"
+      endTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         z   =   1.5
+         __type   =   "Vector3d"
+      }
+      endTrackerLocator   =   "GUN_L"
+      __type   =   "MeleeDetectorSettings"
+   }
+   RightFoot   =   {
+      sslModule   =   "weapons.melee.melee_detector_settings"
+      rootTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         __type   =   "Vector3d"
+      }
+      rootTrackerLocator   =   "LEG2R"
+      endTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         x   =   -2
+         y   =   0
+         z   =   0
+         __type   =   "Vector3d"
+      }
+      endTrackerLocator   =   "LEG2R"
+      __type   =   "MeleeDetectorSettings"
+   }
+   RightShoulder   =   {
+      sslModule   =   "weapons.melee.melee_detector_settings"
+      rootTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         __type   =   "Vector3d"
+      }
+      rootTrackerLocator   =   "clavicleR"
+      endTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         x   =   -2
+         y   =   0
+         z   =   0
+         __type   =   "Vector3d"
+      }
+      endTrackerLocator   =   "clavicleR"
+      __type   =   "MeleeDetectorSettings"
+   }
+   LeftShoulder   =   {
+      sslModule   =   "weapons.melee.melee_detector_settings"
+      rootTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         __type   =   "Vector3d"
+      }
+      rootTrackerLocator   =   "clavicleL"
+      endTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         x   =   2
+         y   =   0
+         z   =   0
+         __type   =   "Vector3d"
+      }
+      endTrackerLocator   =   "clavicleL"
+      __type   =   "MeleeDetectorSettings"
+   }
+   LongRightHandPower   =   {
+      sslModule   =   "weapons.melee.melee_detector_settings"
+      rootTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         __type   =   "Vector3d"
+      }
+      rootTrackerLocator   =   "GUN_R"
+      endTrackerOffset   =   {
+         sslModule   =   "math.vector_3d"
+         z   =   5
+         __type   =   "Vector3d"
+      }
+      endTrackerLocator   =   "GUN_R"
+      staticCheckEndOffset   =   -3.4
+      __type   =   "MeleeDetectorSettings"
+   }
+}
+comboDesc   =   {
+   sslModule   =   "weapons.melee.weapon_descriptions.melee_combo_desc"
+   constraintSettings   =   {
+      constraintOffset   =   1
+      maxLinearSpeed   =   8
+      __type   =   "MeleeConstraintSettings"
+   }
+   softConstraintAvoidanceSettings   =   {
+      constraintWeight   =   0
+      __type   =   "MeleeSoftConstraintAvoidanceSettings"
+   }
+   parrySettings   =   {
+      sslModule   =   "weapons.melee.weapon_descriptions.melee_combo_parry_settings"
+      parryEnabledDuration   =   0.66
+      riposteEnabledStartTime   =   0.165
+      riposteEnabledDuration   =   0.495
+      riposteExtraDamages   =   {
+         melee_extra_damage   =   {
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_sphere_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            healthDmgPercent   =   0
+            heavyHitDmgPercent   =   100
+            radiusScale   =   3
+            damageLocator   =   "Trajectory"
+            damageOffset   =   {
+               z   =   2
+               __type   =   "Vector3d"
+            }
+            __type   =   "MeleeExtraDamageSettings"
+         }
+      }
+      parryStanceAnim   =   {
+         sslModule   =   "animation.animation_table"
+         link   =   "Primaris.Melee.ParryStance1"
+         __type   =   "AnimTableLink"
+      }
+      parryAnim   =   {
+         sslModule   =   "animation.animation_table"
+         link   =   "Primaris.Melee.Parry1"
+         __type   =   "AnimTableLink"
+      }
+      parryAnimOverrides   =   {
+         Hormagaunt   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.Parry2"
+            __type   =   "AnimTableLink"
+         }
+      }
+      riposteAnim   =   {
+         sslModule   =   "animation.animation_table"
+         link   =   "Primaris.Melee.PowerSwordRipost1"
+         __type   =   "AnimTableLink"
+      }
+      abortAnim   =   {
+         sslModule   =   "animation.animation_table"
+         link   =   "Primaris.Melee.AbortParryStance"
+         __type   =   "AnimTableLink"
+      }
+      parryDesc   =   {
+         type   =   {
+            __type   =   "MeleeComboParryProject"
+         }
+         __type   =   "MeleeComboParryDesc"
+      }
+      __type   =   "MeleeComboParrySettings"
+   }
+   slowdownSettings   =   {
+      sslModule   =   "weapons.melee.weapon_descriptions.melee_combo_slowdown_settings"
+      slowdownTime   =   0.231
+      slowdownDesc   =   {
+         type   =   {
+            __type   =   "MeleeComboSlowdownProject"
+         }
+         __type   =   "MeleeComboSlowdownDesc"
+      }
+      __type   =   "MeleeComboSlowdownSettings"
+   }
+   blueprintDesc   =   {
+      type   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_melee_combo"
+         nodes   =   {
+            MeleeComboStrike   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   9400
+                  y   =   5950
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "SpeedSlash1"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "If_1_2/Input",
+                  "Pipe_17/Input"
+               ]
+               OnLightHold   =   [
+                  "Pipe_Dbf9LK3n/Input"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            MeleeComboStrike_1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   10250
+                  y   =   5950
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "SpeedSlash2"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "If_1_3/Input",
+                  "Pipe_Dbs93B4H/Input"
+               ]
+               OnLightHold   =   [
+                  "Pipe_Dbf9NUc7/Input"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            MeleeComboStrike_2   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   11050
+                  y   =   5950
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "SpeedSlash3"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "If_1_4/Input",
+                  "Pipe_12/Input"
+               ]
+               OnLightHold   =   [
+                  "Pipe_Dbf9O5es/Input"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            MeleeComboStart   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_start"
+               viewData   =   {
+                  x   =   6450
+                  y   =   5650
+               }
+               OnLightTap   =   [
+                  "TriggerEvent_1_3/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStart"
+            }
+            HandleEvent_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   8650
+                  y   =   6100
+               }
+               OnHandle   =   [
+                  "BlueprintLibraryFunction/logic/nodes/If_2/Input"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_light_tap_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            TriggerEvent_1_3   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   6850
+                  y   =   5650
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_light_tap_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            MeleeComboStrike_3   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   9500
+                  y   =   6750
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "PowerSlash1"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "If/Input",
+                  "Pipe_14/Input"
+               ]
+               OnLightHold   =   [
+                  "Pipe_Dbf9Nz2r/Input"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            MeleeComboStrike_3_1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   10250
+                  y   =   6750
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "PowerSlash2"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "If_1/Input",
+                  "Pipe_15/Input"
+               ]
+               OnLightHold   =   [
+                  "Pipe_Dbf9Pd7u/Input"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            MeleeComboStart_1_2_1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_start"
+               viewData   =   {
+                  x   =   6450
+                  y   =   6800
+               }
+               OnLightTap   =   [
+                  "BlueprintLibraryFunction_2/logic/nodes/If_2/Input",
+                  "If_E7nfPdeZ/Input"
+               ]
+               OnLightHold   =   [
+                  "BlueprintLibraryFunction_2/logic/nodes/If_2/Input",
+                  "If_E7nfPdeZ/Input"
+               ]
+               priorityRef   =   {
+                  def   =   1
+                  __type   =   "IntRefParam"
+               }
+               __type   =   "BlueprintNodeMeleeComboStart"
+            }
+            CheckBodyStateCondition_1   =   {
+               sslModule   =   "body.body_state.blueprint_node_check_body_state_condition"
+               viewData   =   {
+                  x   =   6450
+                  y   =   6950
+               }
+               bodyStateCondition   =   {
+                  sslModule   =   "body.body_state.body_state_condition"
+                  bodyStateArray   =   [
+                     "DODGE"
+                  ]
+                  type   =   "ANY"
+                  __type   =   "BodyStateCondition"
+               }
+               Check   =   [
+                  "MeleeComboStart_1_2_1/conditionRef/cb"
+               ]
+               __type   =   "BlueprintNodeCheckBodyStateCondition"
+            }
+            MeleeComboStart_1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_start"
+               viewData   =   {
+                  x   =   6450
+                  y   =   6400
+               }
+               OnLightTap   =   [
+                  "MeleeComboStrike_4/AddStrikeToCombo"
+               ]
+               OnLightHold   =   [
+                  "MeleeComboStrike_4/AddStrikeToCombo"
+               ]
+               priorityRef   =   {
+                  def   =   2
+                  __type   =   "IntRefParam"
+               }
+               __type   =   "BlueprintNodeMeleeComboStart"
+            }
+            MeleeComboStrike_4   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   6750
+                  y   =   6400
+               }
+               strikeLibraryLinkRef   =   {
+                  def   =   "FallingAttack"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "TriggerEvent_1_3_1_1/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            CheckCharacterCommandInProgress_1   =   {
+               sslModule   =   "actions.commands.blueprint_commands.blueprint_node_check_character_command_in_progress"
+               viewData   =   {
+                  x   =   6550
+                  y   =   6550
+               }
+               commandTypeRef   =   {
+                  def   =   "FALLING_ATTACK"
+                  __type   =   "CharacterCommandTypeRefParam"
+               }
+               IsInProgress   =   [
+                  "MeleeComboStart_1/conditionRef/cb",
+                  "If_E7nfPdeZ/condition/cb"
+               ]
+               __type   =   "BlueprintNodeCheckCharacterCommandInProgress"
+            }
+            MeleeComboStrike_5_1_2_1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   7200
+                  y   =   7000
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "PowerDashSlash"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "If_1_Dbrc0V6E1/Input"
+               ]
+               OnLightHold   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_1_3_Dbs8OPdF/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            TriggerEvent_1_3_1_2_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   7950
+                  y   =   6800
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "continue_light_tap_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_3_1_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   7100
+                  y   =   6400
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_light_tap_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            UpdateBPVariable   =   {
+               viewData   =   {
+                  x   =   8750
+                  y   =   7200
+               }
+               variableUidRef   =   {
+                  def   =   "speedMode"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               boolRef   =   {
+                  def   =   False
+                  __type   =   "BoolRefParam"
+               }
+               vector3dRef   =   {
+                  def   =   {
+                     __type   =   "Vector3d"
+                  }
+                  __type   =   "Vector3dRefParam"
+               }
+               __type   =   "BlueprintNodeUpdateVariable"
+            }
+            UpdateBPVariable_1   =   {
+               viewData   =   {
+                  x   =   9400
+                  y   =   7200
+               }
+               variableUidRef   =   {
+                  def   =   "speedMode"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               boolRef   =   {
+                  def   =   True
+                  __type   =   "BoolRefParam"
+               }
+               vector3dRef   =   {
+                  def   =   {
+                     __type   =   "Vector3d"
+                  }
+                  __type   =   "Vector3dRefParam"
+               }
+               __type   =   "BlueprintNodeUpdateVariable"
+            }
+            BlueprintLibraryFunction   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   8950
+                  y   =   6100
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../MeleeComboStrike/AddStrikeToCombo"
+                        ]
+                        OnFalse   =   [
+                           "../../../MeleeComboStrike_3/AddStrikeToCombo"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+            }
+            MeleeComboStrike_3_4   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   11050
+                  y   =   6750
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "PowerSlash3"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "If_1_1/Input",
+                  "Pipe_16/Input"
+               ]
+               OnLightHold   =   [
+                  "Pipe_Dbf9O5es/Input"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            HandleEvent_1_1_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   8500
+                  y   =   7200
+               }
+               OnHandle   =   [
+                  "UpdateBPVariable/Set",
+                  "ActivateForceFeedback_E6dfPd6G/Input"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "set_power_mode"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            HandleEvent_1_1_1_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   9150
+                  y   =   7200
+               }
+               OnHandle   =   [
+                  "UpdateBPVariable_1/Set",
+                  "ActivateForceFeedback_E6dfVs2R/Input"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "set_speed_mode"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            TriggerEvent_1_3_1_3_2   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   12900
+                  y   =   6850
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "continue_power_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            BlueprintLibraryFunction_2   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   6900
+                  y   =   6800
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../MeleeComboStrike_5_1_2_1_1/AddStrikeToCombo"
+                        ]
+                        OnFalse   =   [
+                           "../../../MeleeComboStrike_5_1_2_1/AddStrikeToCombo"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            MeleeComboStrike_5_1_2_1_1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   7200
+                  y   =   6800
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "SpeedDashSlash"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "If_1_Dbrc0y4v1/Input"
+               ]
+               OnLightHold   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_1_3_Dbs8OPdF/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            MeleeComboStrike_2_1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   11850
+                  y   =   5950
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "SpeedSlash4"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "If_1_5/Input",
+                  "Pipe_13/Input"
+               ]
+               OnLightHold   =   [
+                  "Pipe_Dbf9Of6P/Input"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            TriggerEvent_1_3_1_3_3   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13700
+                  y   =   6000
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_light_tap_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            BlueprintLibraryFunction_4   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   10000
+                  y   =   5950
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../MeleeComboStrike_1/AddStrikeToCombo"
+                        ]
+                        OnFalse   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1/TriggerBlueprintEvent"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   9090
+                  y   =   8520
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../OrderMorphemeAnimation_1/Order"
+                        ]
+                        OnFalse   =   [
+                           "../../../OrderMorphemeAnimation_1_1/Order"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            TriggerEvent_1_2_1_1_1_2   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   9740
+                  y   =   8470
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "set_power_mode"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_2_1_1_2_2   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   9740
+                  y   =   8570
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "set_speed_mode"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            HandleEvent_2   =   {
+               viewData   =   {
+                  x   =   8440
+                  y   =   8520
+               }
+               OnHandle   =   [
+                  "PipeWithCondition_1/Input"
+               ]
+               eventUidRefParam   =   {
+                  def   =   "melee_action_holded"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            OrderMorphemeAnimation_1   =   {
+               viewData   =   {
+                  x   =   9340
+                  y   =   8470
+               }
+               OnExit   =   [
+                  "TriggerEvent_1_2_1_1_1_2/TriggerBlueprintEvent"
+               ]
+               animTableLinkRef   =   {
+                  def   =   "Primaris.Melee.SwitchPowerSwordModeSpeedToPower"
+                  __type   =   "AnimTableLinkRefParam"
+               }
+               __type   =   "BlueprintNodeOrderMorphemeAnimation"
+            }
+            OrderMorphemeAnimation_1_1   =   {
+               viewData   =   {
+                  x   =   9340
+                  y   =   8570
+               }
+               OnExit   =   [
+                  "TriggerEvent_1_2_2_1_1_2_2/TriggerBlueprintEvent"
+               ]
+               animTableLinkRef   =   {
+                  def   =   "Primaris.Melee.SwitchPowerSwordModePowerToSpeed"
+                  __type   =   "AnimTableLinkRefParam"
+               }
+               __type   =   "BlueprintNodeOrderMorphemeAnimation"
+            }
+            CheckBodyStateCondition_2   =   {
+               viewData   =   {
+                  x   =   8450
+                  y   =   8700
+               }
+               bodyStateCondition   =   {
+                  bodyStateArray   =   [
+                     "FALLING",
+                     "FINISHER_EXECUTOR",
+                     "FINISHER_TARGET",
+                     "GUN_STRIKE_EXECUTOR",
+                     "GRAB_EXECUTOR",
+                     "GRAB_TARGET",
+                     "AIM_AUGMENTED_ZOOM",
+                     "ABILITY_CAST",
+                     "ABILITY_AIMING",
+                     "HEAVY_HIT",
+                     "STAGGER",
+                     "RIPOSTE_HIT",
+                     "KNOCKBACK",
+                     "STUN",
+                     "INCAP",
+                     "DEAD",
+                     "MELEE_STRIKE",
+                     "AIM_ZOOM",
+                     "AIM_SCOPE",
+                     "BLOCK"
+                  ]
+                  type   =   "ANY"
+                  __type   =   "BodyStateCondition"
+               }
+               Check   =   [
+                  "BoolNot_1/bool/cb"
+               ]
+               __type   =   "BlueprintNodeCheckBodyStateCondition"
+            }
+            BoolNot_1   =   {
+               viewData   =   {
+                  x   =   8790
+                  y   =   8670
+               }
+               Bool   =   [
+                  "PipeWithCondition_1/bool/cb"
+               ]
+               __type   =   "BlueprintMathLibraryBoolreverse"
+            }
+            PipeWithCondition_1   =   {
+               viewData   =   {
+                  x   =   8740
+                  y   =   8520
+               }
+               OnExit   =   [
+                  "BlueprintLibraryFunction_1/logic/nodes/If_2/Input"
+               ]
+               __type   =   "BlueprintMathLibraryBoolpipe"
+            }
+            BlueprintLibraryFunction_4_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   10800
+                  y   =   5950
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../MeleeComboStrike_2/AddStrikeToCombo"
+                        ]
+                        OnFalse   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_2/TriggerBlueprintEvent"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_1_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   11600
+                  y   =   5950
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../MeleeComboStrike_2_1/AddStrikeToCombo"
+                        ]
+                        OnFalse   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_3/TriggerBlueprintEvent"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_1_2   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   10000
+                  y   =   6750
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_1/TriggerBlueprintEvent"
+                        ]
+                        OnFalse   =   [
+                           "../../../MeleeComboStrike_3_1/AddStrikeToCombo"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_1_3   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   10800
+                  y   =   6750
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_1_1/TriggerBlueprintEvent"
+                        ]
+                        OnFalse   =   [
+                           "../../../MeleeComboStrike_3_4/AddStrikeToCombo"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_1_4   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   11550
+                  y   =   6750
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_1_1_1/TriggerBlueprintEvent"
+                        ]
+                        OnFalse   =   [
+                           "../../../If_2_1/Input"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_1_5   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   12400
+                  y   =   5950
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../If_2_1_1/Input"
+                        ]
+                        OnFalse   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_4/TriggerBlueprintEvent"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            TriggerEvent_1_2_1_1_1_2_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   10250
+                  y   =   6100
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_power_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   10250
+                  y   =   6650
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_speed_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            HandleEvent_1_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   8978.37
+                  y   =   5950
+               }
+               OnHandle   =   [
+                  "MeleeComboStrike/AddStrikeToCombo"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_speed_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            HandleEvent_1_2   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   8990.87
+                  y   =   6750
+               }
+               OnHandle   =   [
+                  "MeleeComboStrike_3/AddStrikeToCombo"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_power_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_2   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   11050
+                  y   =   6100
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_power_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_3   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   11850
+                  y   =   6100
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_power_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_4   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   12650
+                  y   =   6092.111
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_power_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   11050
+                  y   =   6650
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_speed_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_2   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   12900
+                  y   =   6750
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_speed_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            IsMeleeSlowTap   =   {
+               viewData   =   {
+                  x   =   9800
+                  y   =   6850
+               }
+               IsSlowTap   =   [
+                  "If/condition/cb"
+               ]
+               __type   =   "BlueprintNodeMeleeComboIsSlowTap"
+            }
+            If   =   {
+               viewData   =   {
+                  x   =   9800
+                  y   =   6750
+               }
+               OnTrue   =   [
+                  "BlueprintLibraryFunction_4_3/logic/nodes/If_2/Input"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_4_1_2/logic/nodes/If_2/Input",
+                  "Pipe_Dbs90ifg/Input"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            MeleeComboStrike_3_2   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   9000
+                  y   =   7450
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "SlowRight2"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_6_2/TriggerBlueprintEvent",
+                  "BlueprintLibraryFunction_4_1_2_1_1/logic/nodes/If_2/Input"
+               ]
+               OnLightHold   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_6_2/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            MeleeComboStrike_3_3   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   9000
+                  y   =   7600
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "SlowLeft2"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_6_2/TriggerBlueprintEvent",
+                  "BlueprintLibraryFunction_4_1_2_1_1/logic/nodes/If_2/Input"
+               ]
+               OnLightHold   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_6_2/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            HandleEvent_1_2_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   8500
+                  y   =   7600
+               }
+               OnHandle   =   [
+                  "MeleeComboStrike_3_3/AddStrikeToCombo"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "slow_tap_attack_left"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_3   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13950
+                  y   =   6600
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "slow_tap_attack_right"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            Pipe   =   {
+               viewData   =   {
+                  x   =   10250
+                  y   =   6600
+               }
+               Output   =   [
+                  "Pipe_5/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            IsMeleeSlowTap_1   =   {
+               viewData   =   {
+                  x   =   10550
+                  y   =   6850
+               }
+               IsSlowTap   =   [
+                  "If_1/condition/cb"
+               ]
+               __type   =   "BlueprintNodeMeleeComboIsSlowTap"
+            }
+            If_1   =   {
+               viewData   =   {
+                  x   =   10550
+                  y   =   6750
+               }
+               OnTrue   =   [
+                  "BlueprintLibraryFunction_4_3_1/logic/nodes/If_2/Input"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_4_1_3/logic/nodes/If_2/Input",
+                  "Pipe_Dbs90q3R/Input"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            Pipe_1   =   {
+               viewData   =   {
+                  x   =   11050
+                  y   =   6250
+               }
+               Output   =   [
+                  "Pipe_2/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            IsMeleeSlowTap_1_1   =   {
+               viewData   =   {
+                  x   =   11350
+                  y   =   6850
+               }
+               IsSlowTap   =   [
+                  "If_1_1/condition/cb"
+               ]
+               __type   =   "BlueprintNodeMeleeComboIsSlowTap"
+            }
+            If_1_1   =   {
+               viewData   =   {
+                  x   =   11350
+                  y   =   6750
+               }
+               OnTrue   =   [
+                  "BlueprintLibraryFunction_4_3_1_1/logic/nodes/If_2/Input"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_4_1_4/logic/nodes/If_2/Input",
+                  "Pipe_Dbs90R6w/Input"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            Pipe_2   =   {
+               viewData   =   {
+                  x   =   11850
+                  y   =   6250
+               }
+               Output   =   [
+                  "Pipe_3/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            IsMeleeSlowTap_1_2   =   {
+               viewData   =   {
+                  x   =   9760.505
+                  y   =   6049.286
+               }
+               IsSlowTap   =   [
+                  "If_1_2/condition/cb"
+               ]
+               __type   =   "BlueprintNodeMeleeComboIsSlowTap"
+            }
+            If_1_2   =   {
+               viewData   =   {
+                  x   =   9760.505
+                  y   =   5949.286
+               }
+               OnTrue   =   [
+                  "BlueprintLibraryFunction_4_2/logic/nodes/If_2/Input"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_4/logic/nodes/If_2/Input",
+                  "Pipe_Dbs91j41/Input"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            IsMeleeSlowTap_1_3   =   {
+               viewData   =   {
+                  x   =   10550
+                  y   =   6050
+               }
+               IsSlowTap   =   [
+                  "If_1_3/condition/cb"
+               ]
+               __type   =   "BlueprintNodeMeleeComboIsSlowTap"
+            }
+            If_1_3   =   {
+               viewData   =   {
+                  x   =   10550
+                  y   =   5950
+               }
+               OnTrue   =   [
+                  "BlueprintLibraryFunction_4_2_1/logic/nodes/If_2/Input"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_4_1/logic/nodes/If_2/Input",
+                  "Pipe_Dbs91zg0/Input"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            IsMeleeSlowTap_1_4   =   {
+               viewData   =   {
+                  x   =   11403
+                  y   =   6050
+               }
+               IsSlowTap   =   [
+                  "If_1_4/condition/cb"
+               ]
+               __type   =   "BlueprintNodeMeleeComboIsSlowTap"
+            }
+            If_1_4   =   {
+               viewData   =   {
+                  x   =   11403
+                  y   =   5950
+               }
+               OnTrue   =   [
+                  "BlueprintLibraryFunction_4_2_1_1/logic/nodes/If_2/Input"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_4_1_1/logic/nodes/If_2/Input",
+                  "Pipe_Dbs91P8N/Input"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            IsMeleeSlowTap_1_5   =   {
+               viewData   =   {
+                  x   =   12200
+                  y   =   6050
+               }
+               IsSlowTap   =   [
+                  "If_1_5/condition/cb"
+               ]
+               __type   =   "BlueprintNodeMeleeComboIsSlowTap"
+            }
+            If_1_5   =   {
+               viewData   =   {
+                  x   =   12200
+                  y   =   5950
+               }
+               OnTrue   =   [
+                  "BlueprintLibraryFunction_4_2_1_2/logic/nodes/If_2/Input"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_4_1_5/logic/nodes/If_2/Input",
+                  "Pipe_Dbs94qeT/Input"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            Pipe_3   =   {
+               viewData   =   {
+                  x   =   12700
+                  y   =   6250
+               }
+               Output   =   [
+                  "Pipe_9/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            GetBPVariable   =   {
+               viewData   =   {
+                  x   =   9350
+                  y   =   6100
+               }
+               variableUidRef   =   {
+                  def   =   "speedSlash1SD"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "IsMeleeSlowTap_1_2/slowTapDelayRef/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            GetBPVariable_1   =   {
+               viewData   =   {
+                  x   =   9400
+                  y   =   6950
+               }
+               variableUidRef   =   {
+                  def   =   "powerSlash1SD"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "IsMeleeSlowTap/slowTapDelayRef/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_5   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   10100
+                  y   =   7650
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_power_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_4   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   10100
+                  y   =   7450
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_speed_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            BlueprintLibraryFunction_4_1_2_1_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   9850
+                  y   =   7550
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_1_4/TriggerBlueprintEvent"
+                        ]
+                        OnFalse   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_5/TriggerBlueprintEvent"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_2   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   10000
+                  y   =   6150
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../Pipe/Input"
+                        ]
+                        OnFalse   =   [
+                           "../../../Pipe/Input"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_3   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   10000
+                  y   =   6600
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../Pipe_7/Input"
+                        ]
+                        OnFalse   =   [
+                           "../../../Pipe_7/Input"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_2_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   10800
+                  y   =   6150
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../Pipe_1/Input"
+                        ]
+                        OnFalse   =   [
+                           "../../../Pipe_1/Input"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_3_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   10800
+                  y   =   6650
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../Pipe_5/Input"
+                        ]
+                        OnFalse   =   [
+                           "../../../Pipe_5/Input"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_2_1_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   11600
+                  y   =   6150
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../Pipe_6/Input"
+                        ]
+                        OnFalse   =   [
+                           "../../../Pipe_6/Input"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_3_1_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   11600
+                  y   =   6650
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../Pipe_6/Input"
+                        ]
+                        OnFalse   =   [
+                           "../../../Pipe_6/Input"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            BlueprintLibraryFunction_4_2_1_2   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   12400
+                  y   =   6150
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../Pipe_3/Input"
+                        ]
+                        OnFalse   =   [
+                           "../../../Pipe_3/Input"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            MeleeComboStart_2   =   {
+               viewData   =   {
+                  x   =   6500
+                  y   =   7350
+               }
+               OnLightTap   =   [
+                  "If_1_6/Input"
+               ]
+               OnLightHold   =   [
+                  "If_1_6/Input"
+               ]
+               priorityRef   =   {
+                  def   =   10
+                  __type   =   "IntRefParam"
+               }
+               __type   =   "BlueprintNodeMeleeComboStart"
+            }
+            CheckBodyStateCondition_1_1   =   {
+               sslModule   =   "body.body_state.blueprint_node_check_body_state_condition"
+               viewData   =   {
+                  x   =   6500
+                  y   =   7500
+               }
+               bodyStateCondition   =   {
+                  bodyStateArray   =   [
+                     "BLOCK"
+                  ]
+                  type   =   "ANY"
+                  __type   =   "BodyStateCondition"
+               }
+               Check   =   [
+                  "MeleeComboStart_2/conditionRef/cb"
+               ]
+               __type   =   "BlueprintNodeCheckBodyStateCondition"
+            }
+            MeleeComboStrike_3_5   =   {
+               viewData   =   {
+                  x   =   7200
+                  y   =   7350
+               }
+               strikeLibraryLinkRef   =   {
+                  def   =   "CombatShield1"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            GetBPVariable_2   =   {
+               viewData   =   {
+                  x   =   10300
+                  y   =   6200
+               }
+               variableUidRef   =   {
+                  def   =   "speedSlash2SD"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "IsMeleeSlowTap_1_3/slowTapDelayRef/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            GetBPVariable_3   =   {
+               viewData   =   {
+                  x   =   11100
+                  y   =   6200
+               }
+               variableUidRef   =   {
+                  def   =   "speedSlash3SD"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "IsMeleeSlowTap_1_4/slowTapDelayRef/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            GetBPVariable_4   =   {
+               viewData   =   {
+                  x   =   11850
+                  y   =   6200
+               }
+               variableUidRef   =   {
+                  def   =   "speedSlash4SD"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "IsMeleeSlowTap_1_5/slowTapDelayRef/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            GetBPVariable_5   =   {
+               viewData   =   {
+                  x   =   10430.71
+                  y   =   6974.944
+               }
+               variableUidRef   =   {
+                  def   =   "powerSlash2SD"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "IsMeleeSlowTap_1/slowTapDelayRef/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            GetBPVariable_6   =   {
+               viewData   =   {
+                  x   =   11286.71
+                  y   =   6950
+               }
+               variableUidRef   =   {
+                  def   =   "powerSlash3SD"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "IsMeleeSlowTap_1_1/slowTapDelayRef/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            HandleEvent_1_2_1_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   8500
+                  y   =   7450
+               }
+               OnHandle   =   [
+                  "MeleeComboStrike_3_2/AddStrikeToCombo"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "slow_tap_attack_right"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_3_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13950
+                  y   =   6250
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "slow_tap_attack_left"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            Pipe_4   =   {
+               viewData   =   {
+                  x   =   13800
+                  y   =   6600
+               }
+               Output   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_1_3/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_6   =   {
+               viewData   =   {
+                  x   =   11900
+                  y   =   6600
+               }
+               Output   =   [
+                  "Pipe_8/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_7   =   {
+               viewData   =   {
+                  x   =   10250
+                  y   =   6250
+               }
+               Output   =   [
+                  "Pipe_1/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_5   =   {
+               viewData   =   {
+                  x   =   11050
+                  y   =   6600
+               }
+               Output   =   [
+                  "Pipe_6/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            MeleeComboStart_1_2_1_1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_start"
+               viewData   =   {
+                  x   =   6450
+                  y   =   7050
+               }
+               OnLightTap   =   [
+                  "BlueprintLibraryFunction_2/logic/nodes/If_2/Input"
+               ]
+               priorityRef   =   {
+                  def   =   1
+                  __type   =   "IntRefParam"
+               }
+               __type   =   "BlueprintNodeMeleeComboStart"
+            }
+            CheckBodyStateCondition_1_2   =   {
+               sslModule   =   "body.body_state.blueprint_node_check_body_state_condition"
+               viewData   =   {
+                  x   =   6450
+                  y   =   7150
+               }
+               bodyStateCondition   =   {
+                  bodyStateArray   =   [
+                     "SPRINT"
+                  ]
+                  type   =   "ANY"
+                  __type   =   "BodyStateCondition"
+               }
+               Check   =   [
+                  "MeleeComboStart_1_2_1_1/conditionRef/cb"
+               ]
+               __type   =   "BlueprintNodeCheckBodyStateCondition"
+            }
+            If_1_6   =   {
+               viewData   =   {
+                  x   =   6950
+                  y   =   7350
+               }
+               OnTrue   =   [
+                  "BlueprintLibraryFunction_2/logic/nodes/If_2/Input"
+               ]
+               OnFalse   =   [
+                  "MeleeComboStrike_3_5/AddStrikeToCombo"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            CheckBodyStateCondition_1_2_1   =   {
+               sslModule   =   "body.body_state.blueprint_node_check_body_state_condition"
+               viewData   =   {
+                  x   =   6950
+                  y   =   7500
+               }
+               bodyStateCondition   =   {
+                  bodyStateArray   =   [
+                     "DODGE",
+                     "SPRINT"
+                  ]
+                  type   =   "ANY"
+                  __type   =   "BodyStateCondition"
+               }
+               Check   =   [
+                  "If_1_6/condition/cb"
+               ]
+               __type   =   "BlueprintNodeCheckBodyStateCondition"
+            }
+            HandleEvent_1_3   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   9900
+                  y   =   6950
+               }
+               OnHandle   =   [
+                  "BlueprintLibraryFunction_4_1_2/logic/nodes/If_2/Input"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "continue_power_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            TriggerEvent_1_3_1_2_1_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   7950
+                  y   =   7050
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "continue_power_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_1_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   11900
+                  y   =   6650
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_speed_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            CheckModifierFlag_1_1   =   {
+               viewData   =   {
+                  x   =   11650
+                  y   =   6950
+               }
+               flag   =   "COMBO_2_ADDITIONAL_STRIKE"
+               IsEnabled   =   [
+                  "If_2_1/condition/cb"
+               ]
+               __type   =   "BlueprintNodeCheckModifierFlag"
+            }
+            If_2_1   =   {
+               viewData   =   {
+                  x   =   11850
+                  y   =   6750
+               }
+               OnTrue   =   [
+                  "MeleeComboStrike_3_4_1/AddStrikeToCombo"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_4_1_4_1_1/logic/nodes/If_2/Input"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            MeleeComboStrike_3_4_1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   12050
+                  y   =   6750
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "PerkPowerSlash4"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "If_1_1_1/Input",
+                  "Pipe_Dbs92Ud4/Input"
+               ]
+               OnLightHold   =   [
+                  "Pipe_Dbf9PF9y/Input"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            BlueprintLibraryFunction_4_1_4_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   12600
+                  y   =   6750
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_1_2/TriggerBlueprintEvent"
+                        ]
+                        OnFalse   =   [
+                           "../../../TriggerEvent_1_3_1_3_2/TriggerBlueprintEvent"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            IsMeleeSlowTap_1_1_1   =   {
+               viewData   =   {
+                  x   =   12400
+                  y   =   6850
+               }
+               IsSlowTap   =   [
+                  "If_1_1_1/condition/cb"
+               ]
+               __type   =   "BlueprintNodeMeleeComboIsSlowTap"
+            }
+            If_1_1_1   =   {
+               viewData   =   {
+                  x   =   12400
+                  y   =   6750
+               }
+               OnTrue   =   [
+                  "BlueprintLibraryFunction_4_3_1_1_1/logic/nodes/If_2/Input"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_4_1_4_1/logic/nodes/If_2/Input",
+                  "TriggerEvent_1_2_1_1_1_2_1_6_2_1_1/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            BlueprintLibraryFunction_4_3_1_1_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   12650
+                  y   =   6650
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../Pipe_9/Input"
+                        ]
+                        OnFalse   =   [
+                           "../../../Pipe_9/Input"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            GetBPVariable_6_1   =   {
+               viewData   =   {
+                  x   =   12336.71
+                  y   =   6950
+               }
+               variableUidRef   =   {
+                  def   =   "powerSlash3SD"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "IsMeleeSlowTap_1_1_1/slowTapDelayRef/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            Pipe_8   =   {
+               viewData   =   {
+                  x   =   12850
+                  y   =   6600
+               }
+               Output   =   [
+                  "Pipe_4/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            MeleeComboStrike_2_1_1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   12850
+                  y   =   5950
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "PerkSpeedSlash5"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "If_1_5_1/Input",
+                  "Pipe_Dbs94R4r/Input"
+               ]
+               OnLightHold   =   [
+                  "Pipe_Dbf9KL5G/Input"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            BlueprintLibraryFunction_4_1_5_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   13400
+                  y   =   5950
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_1_2_2_1/TriggerBlueprintEvent"
+                        ]
+                        OnFalse   =   [
+                           "../../../TriggerEvent_1_3_1_3_3/TriggerBlueprintEvent"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            IsMeleeSlowTap_1_5_1   =   {
+               viewData   =   {
+                  x   =   13200
+                  y   =   6050
+               }
+               IsSlowTap   =   [
+                  "If_1_5_1/condition/cb"
+               ]
+               __type   =   "BlueprintNodeMeleeComboIsSlowTap"
+            }
+            If_1_5_1   =   {
+               viewData   =   {
+                  x   =   13200
+                  y   =   5950
+               }
+               OnTrue   =   [
+                  "BlueprintLibraryFunction_4_2_1_2_1/logic/nodes/If_2/Input"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_4_1_5_1/logic/nodes/If_2/Input",
+                  "TriggerEvent_1_2_1_1_1_2_1_6_2_1/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            BlueprintLibraryFunction_4_2_1_2_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   13400
+                  y   =   6150
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../Pipe_4/Input"
+                        ]
+                        OnFalse   =   [
+                           "../../../Pipe_4/Input"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            GetBPVariable_4_1   =   {
+               viewData   =   {
+                  x   =   12800
+                  y   =   6150
+               }
+               variableUidRef   =   {
+                  def   =   "speedSlash4SD"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "IsMeleeSlowTap_1_5_1/slowTapDelayRef/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            CheckModifierFlag_1_1_1   =   {
+               viewData   =   {
+                  x   =   12435.34
+                  y   =   5850
+               }
+               flag   =   "COMBO_1_ADDITIONAL_STRIKE"
+               IsEnabled   =   [
+                  "If_2_1_1/condition/cb"
+               ]
+               __type   =   "BlueprintNodeCheckModifierFlag"
+            }
+            If_2_1_1   =   {
+               viewData   =   {
+                  x   =   12635.34
+                  y   =   5950
+               }
+               OnTrue   =   [
+                  "MeleeComboStrike_2_1_1/AddStrikeToCombo"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_4_1_4_1_2/logic/nodes/If_2/Input"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            TriggerEvent_1_3_1_3_2_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   12300
+                  y   =   7150
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_light_tap_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_2_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   12300
+                  y   =   7050
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_speed_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            BlueprintLibraryFunction_4_1_4_1_1   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   12000
+                  y   =   7050
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_1_2_1/TriggerBlueprintEvent"
+                        ]
+                        OnFalse   =   [
+                           "../../../TriggerEvent_1_3_1_3_2_1/TriggerBlueprintEvent"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            TriggerEvent_1_3_1_3_2_2   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13250
+                  y   =   5850
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_light_tap_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_2_2   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13250
+                  y   =   5750
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_speed_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            BlueprintLibraryFunction_4_1_4_1_2   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   12950
+                  y   =   5800
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_1_2_2/TriggerBlueprintEvent"
+                        ]
+                        OnFalse   =   [
+                           "../../../TriggerEvent_1_3_1_3_2_2/TriggerBlueprintEvent"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            Pipe_9   =   {
+               viewData   =   {
+                  x   =   13150
+                  y   =   6250
+               }
+               Output   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_1_3_1/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_2_2_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13650
+                  y   =   5900
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_speed_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            Delay   =   {
+               viewData   =   {
+                  x   =   8840
+                  y   =   5170
+               }
+               OnFinish   =   [
+                  "UpdateBPVariable_2/Set"
+               ]
+               __type   =   "BlueprintTimeLibraryDelay"
+            }
+            UpdateBPVariable_2   =   {
+               viewData   =   {
+                  x   =   9040
+                  y   =   5170
+               }
+               variableUidRef   =   {
+                  def   =   "perkIsMeleeSlowTap"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               OnExit   =   [
+                  "Delay_1/Start"
+               ]
+               boolRef   =   {
+                  def   =   True
+                  __type   =   "BoolRefParam"
+               }
+               vector3dRef   =   {
+                  def   =   {
+                     __type   =   "Vector3d"
+                  }
+                  __type   =   "Vector3dRefParam"
+               }
+               __type   =   "BlueprintNodeUpdateVariable"
+            }
+            Delay_1   =   {
+               viewData   =   {
+                  x   =   9490
+                  y   =   5170
+               }
+               OnFinish   =   [
+                  "UpdateBPVariable_2_1/Set"
+               ]
+               __type   =   "BlueprintTimeLibraryDelay"
+            }
+            UpdateBPVariable_2_1   =   {
+               viewData   =   {
+                  x   =   9740
+                  y   =   5170
+               }
+               variableUidRef   =   {
+                  def   =   "perkIsMeleeSlowTap"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               vector3dRef   =   {
+                  def   =   {
+                     __type   =   "Vector3d"
+                  }
+                  __type   =   "Vector3dRefParam"
+               }
+               __type   =   "BlueprintNodeUpdateVariable"
+            }
+            GetBPVariable_7   =   {
+               viewData   =   {
+                  x   =   9040
+                  y   =   5270
+               }
+               variableUidRef   =   {
+                  def   =   "slowTapStanceDuration"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "Delay_1/duration/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            HandleEvent_1_1_2   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   8440
+                  y   =   5070
+               }
+               OnHandle   =   [
+                  "Delay/Start",
+                  "Pipe_10/Input"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "perkIsMeleeSlowTapTrue"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            HandleEvent_1_1_3   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   8440
+                  y   =   4920
+               }
+               OnHandle   =   [
+                  "Pipe_19/Input"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "perkIsMeleeSlowTapFalse"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            GetBPVariable_8   =   {
+               viewData   =   {
+                  x   =   8440
+                  y   =   5270
+               }
+               variableUidRef   =   {
+                  def   =   "delayBeforeSlowTap"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "Delay/duration/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_6   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13750
+                  y   =   5650
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "perkIsMeleeSlowTapTrue"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            Pipe_10   =   {
+               viewData   =   {
+                  x   =   9390
+                  y   =   5070
+               }
+               Output   =   [
+                  "Delay_1/Stop",
+                  "Pipe_11/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_11   =   {
+               viewData   =   {
+                  x   =   9540
+                  y   =   5070
+               }
+               Output   =   [
+                  "UpdateBPVariable_2_1/Set"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_12   =   {
+               viewData   =   {
+                  x   =   11450
+                  y   =   5650
+               }
+               Output   =   [
+                  "Pipe_13/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_13   =   {
+               viewData   =   {
+                  x   =   12350
+                  y   =   5650
+               }
+               Output   =   [
+                  "Pipe_Dbs94R4r/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_6_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13000
+                  y   =   7300
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "perkIsMeleeSlowTapTrue"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            Pipe_14   =   {
+               viewData   =   {
+                  x   =   10150
+                  y   =   7300
+               }
+               Output   =   [
+                  "Pipe_15/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_15   =   {
+               viewData   =   {
+                  x   =   10850
+                  y   =   7300
+               }
+               Output   =   [
+                  "Pipe_16/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_16   =   {
+               viewData   =   {
+                  x   =   11650
+                  y   =   7300
+               }
+               Output   =   [
+                  "Pipe_Dbs92Ud4/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_6_2   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   9400
+                  y   =   7350
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "perkIsMeleeSlowTapFalse"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            Pipe_17   =   {
+               viewData   =   {
+                  x   =   9850
+                  y   =   5650
+               }
+               Output   =   [
+                  "Pipe_Dbs93B4H/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_18   =   {
+               viewData   =   {
+                  x   =   9590
+                  y   =   4920
+               }
+               Output   =   [
+                  "UpdateBPVariable_2_1/Set"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_19   =   {
+               viewData   =   {
+                  x   =   8790
+                  y   =   4920
+               }
+               Output   =   [
+                  "Pipe_18/Input",
+                  "Delay/Stop"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_6_2_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13750
+                  y   =   5550
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "perkIsMeleeSlowTapFalse"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_6_2_1_1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13000
+                  y   =   7400
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "perkIsMeleeSlowTapFalse"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_3_Dbf9Kdco   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13950
+                  y   =   6350
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "hold_attack_left"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_Dbf9Kl5G   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   13950
+                  y   =   6500
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "hold_attack_right"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            Pipe_Dbf9KL5G   =   {
+               viewData   =   {
+                  x   =   13800
+                  y   =   6500
+               }
+               Output   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_1_Dbf9Kl5G/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbf9KPeJ   =   {
+               viewData   =   {
+                  x   =   13800
+                  y   =   6350
+               }
+               Output   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_1_3_Dbf9Kdco/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbf9LK3n   =   {
+               viewData   =   {
+                  x   =   10250
+                  y   =   6500
+               }
+               Output   =   [
+                  "Pipe_Dbf9Pd7u/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbf9Nz2r   =   {
+               viewData   =   {
+                  x   =   10250
+                  y   =   6350
+               }
+               Output   =   [
+                  "Pipe_Dbf9NUc7/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbf9NUc7   =   {
+               viewData   =   {
+                  x   =   10881.44
+                  y   =   6350
+               }
+               Output   =   [
+                  "Pipe_Dbf9Of6P/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbf9O5es   =   {
+               viewData   =   {
+                  x   =   11600
+                  y   =   6500
+               }
+               Output   =   [
+                  "Pipe_Dbf9KL5G/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbf9Of6P   =   {
+               viewData   =   {
+                  x   =   12350
+                  y   =   6350
+               }
+               Output   =   [
+                  "Pipe_Dbf9PF9y/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbf9Pd7u   =   {
+               viewData   =   {
+                  x   =   10836.32
+                  y   =   6500
+               }
+               Output   =   [
+                  "Pipe_Dbf9O5es/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbf9PF9y   =   {
+               viewData   =   {
+                  x   =   12800
+                  y   =   6350
+               }
+               Output   =   [
+                  "Pipe_Dbf9KPeJ/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            HandleEvent_1_2_Dbf9QO5t   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   8500
+                  y   =   8000
+               }
+               OnHandle   =   [
+                  "MeleeComboStrike_3_Dbf9RQa11/AddStrikeToCombo"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "hold_attack_left"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            HandleEvent_1_2_1_Dbf9QO5t1   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_handle_event"
+               viewData   =   {
+                  x   =   8500
+                  y   =   7850
+               }
+               OnHandle   =   [
+                  "MeleeComboStrike_3_Dbf9RQa1/AddStrikeToCombo"
+               ]
+               eventUidRefParam   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "hold_attack_right"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            MeleeComboStrike_3_Dbf9RQa1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   9000
+                  y   =   7850
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "SlowRight"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "Pipe_Dbf9Sy6Y/Input"
+               ]
+               OnLightHold   =   [
+                  "MeleeComboStrike_3_Dbf9RQa17/AddStrikeToCombo"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            MeleeComboStrike_3_Dbf9RQa11   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   9000
+                  y   =   8000
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "SlowLeft"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "Pipe_Dbm9t7fo/Input"
+               ]
+               OnLightHold   =   [
+                  "MeleeComboStrike_3_Dbf9RQa16/AddStrikeToCombo"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_Dbf9RQa12   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   10100
+                  y   =   7950
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_power_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_Dbf9RQa13   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   10100
+                  y   =   7850
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_speed_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            BlueprintLibraryFunction_4_1_2_1_Dbf9RQa14   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   9850
+                  y   =   7850
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_1_Dbf9RQa13/TriggerBlueprintEvent"
+                        ]
+                        OnFalse   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_Dbf9RQa12/TriggerBlueprintEvent"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            MeleeComboStrike_3_Dbf9RQa16   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   9400
+                  y   =   8050
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "SlowRight"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "BlueprintLibraryFunction_4_1_2_1_Dbm9rH732/logic/nodes/If_2/Input"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            MeleeComboStrike_3_Dbf9RQa17   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.blueprint_node_melee_combo_strike"
+               viewData   =   {
+                  x   =   9400
+                  y   =   7850
+               }
+               strikeLibraryLinkRef   =   {
+                  sslModule   =   "weapons.controllers.melee_controller.combo.strike_settings_link_ref_param"
+                  def   =   "SlowLeft"
+                  __type   =   "StrikeSettingsLinkRefParam"
+               }
+               OnLightTap   =   [
+                  "BlueprintLibraryFunction_4_1_2_1_Dbf9RQa14/logic/nodes/If_2/Input"
+               ]
+               __type   =   "BlueprintNodeMeleeComboStrike"
+            }
+            Pipe_Dbf9Sy6Y   =   {
+               viewData   =   {
+                  x   =   9400
+                  y   =   7950
+               }
+               Output   =   [
+                  "Pipe_Dbm9s18a/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_Dbm9rH73   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   10100
+                  y   =   8150
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "continue_power_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_Dbm9rH731   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   10100
+                  y   =   8050
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "start_speed_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            BlueprintLibraryFunction_4_1_2_1_Dbm9rH732   =   {
+               captionVar   =   "CheckWeaponMode"
+               viewData   =   {
+                  x   =   9850
+                  y   =   8050
+               }
+               logic   =   {
+                  nodes   =   {
+                     GetBPVariable   =   {
+                        viewData   =   {
+                           x   =   -75
+                           y   =   25
+                        }
+                        variableUidRef   =   {
+                           def   =   "speedMode"
+                           __type   =   "BlueprintVariableUidRefParam"
+                        }
+                        GetVariableBool   =   [
+                           "If_2/condition/cb"
+                        ]
+                        __type   =   "BlueprintNodeGetVariable"
+                     }
+                     If_2   =   {
+                        viewData   =   {
+                           x   =   175
+                           y   =   -75
+                        }
+                        OnTrue   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_1_Dbm9rH731/TriggerBlueprintEvent"
+                        ]
+                        OnFalse   =   [
+                           "../../../TriggerEvent_1_2_1_1_1_2_1_Dbm9rH73/TriggerBlueprintEvent"
+                        ]
+                        __type   =   "BlueprintNodeIf"
+                     }
+                  }
+                  __type   =   "BluePrintFunction"
+               }
+               external   =   [
+                  "logic/nodes/If_2;Input",
+                  "logic/nodes/If_2;OnTrue;Speed Mode;OnTrue",
+                  "logic/nodes/If_2;OnFalse;Power Mode;OnFalse"
+               ]
+               __type   =   "BlueprintLibraryFunction"
+            }
+            Pipe_Dbm9s18a   =   {
+               viewData   =   {
+                  x   =   9650
+                  y   =   7950
+               }
+               Output   =   [
+                  "BlueprintLibraryFunction_4_1_2_1_Dbm9rH732/logic/nodes/If_2/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbm9t7fo   =   {
+               viewData   =   {
+                  x   =   9400
+                  y   =   8000
+               }
+               Output   =   [
+                  "Pipe_Dbm9tfak/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbm9tfak   =   {
+               viewData   =   {
+                  x   =   9650
+                  y   =   8000
+               }
+               Output   =   [
+                  "BlueprintLibraryFunction_4_1_2_1_Dbf9RQa14/logic/nodes/If_2/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            IsMeleeSlowTap_1_Dbrc0y4v   =   {
+               viewData   =   {
+                  x   =   7600
+                  y   =   6900
+               }
+               IsSlowTap   =   [
+                  "If_1_Dbrc0y4v1/condition/cb"
+               ]
+               __type   =   "BlueprintNodeMeleeComboIsSlowTap"
+            }
+            If_1_Dbrc0y4v1   =   {
+               viewData   =   {
+                  x   =   7600
+                  y   =   6800
+               }
+               OnTrue   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_1_3_Dbrc1ya81/TriggerBlueprintEvent"
+               ]
+               OnFalse   =   [
+                  "TriggerEvent_1_3_1_2_1/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            IsMeleeSlowTap_1_Dbrc0V6E   =   {
+               viewData   =   {
+                  x   =   7600
+                  y   =   7100
+               }
+               IsSlowTap   =   [
+                  "If_1_Dbrc0V6E1/condition/cb"
+               ]
+               __type   =   "BlueprintNodeMeleeComboIsSlowTap"
+            }
+            If_1_Dbrc0V6E1   =   {
+               viewData   =   {
+                  x   =   7600
+                  y   =   7000
+               }
+               OnTrue   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_1_3_Dbrc1ya81/TriggerBlueprintEvent"
+               ]
+               OnFalse   =   [
+                  "TriggerEvent_1_3_1_2_1_1/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+            GetBPVariable_Dbrc1h56   =   {
+               viewData   =   {
+                  x   =   7200
+                  y   =   7150
+               }
+               variableUidRef   =   {
+                  def   =   "speedSlash2SD"
+                  __type   =   "BlueprintVariableUidRefParam"
+               }
+               blueprintVariableType   =   "FLOAT"
+               GetVariableFLoat   =   [
+                  "IsMeleeSlowTap_1_Dbrc0V6E/slowTapDelayRef/cb",
+                  "IsMeleeSlowTap_1_Dbrc0y4v/slowTapDelayRef/cb"
+               ]
+               __type   =   "BlueprintNodeGetVariable"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_3_Dbrc1ya81   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   7950
+                  y   =   6900
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "slow_tap_attack_left"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            TriggerEvent_1_2_1_1_1_2_1_1_3_Dbs8OPdF   =   {
+               sslModule   =   "extensions.blueprints.flow.blueprint_node_trigger_custom_event"
+               viewData   =   {
+                  x   =   7960.879
+                  y   =   7160.566
+               }
+               eventUid   =   {
+                  sslModule   =   "ssl.lib.blueprint.blueprint"
+                  def   =   "hold_attack_left"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeTriggerCustomEvent"
+            }
+            Pipe_Dbs90ifg   =   {
+               viewData   =   {
+                  x   =   10600
+                  y   =   7400
+               }
+               Output   =   [
+                  "Pipe_Dbs90q3R/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbs90q3R   =   {
+               viewData   =   {
+                  x   =   11250
+                  y   =   7400
+               }
+               Output   =   [
+                  "Pipe_Dbs90R6w/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbs90R6w   =   {
+               viewData   =   {
+                  x   =   12050
+                  y   =   7400
+               }
+               Output   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_6_2_1_1/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbs91j41   =   {
+               viewData   =   {
+                  x   =   10150
+                  y   =   5550
+               }
+               Output   =   [
+                  "Pipe_Dbs91zg0/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbs91zg0   =   {
+               viewData   =   {
+                  x   =   11000
+                  y   =   5550
+               }
+               Output   =   [
+                  "Pipe_Dbs91P8N/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbs91P8N   =   {
+               viewData   =   {
+                  x   =   11838.02
+                  y   =   5550
+               }
+               Output   =   [
+                  "Pipe_Dbs94qeT/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbs92Ud4   =   {
+               viewData   =   {
+                  x   =   12650
+                  y   =   7300
+               }
+               Output   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_6_1/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbs93B4H   =   {
+               viewData   =   {
+                  x   =   10650
+                  y   =   5650
+               }
+               Output   =   [
+                  "Pipe_12/Input"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbs94qeT   =   {
+               viewData   =   {
+                  x   =   12632.38
+                  y   =   5550
+               }
+               Output   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_6_2_1/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            Pipe_Dbs94R4r   =   {
+               viewData   =   {
+                  x   =   13300
+                  y   =   5650
+               }
+               Output   =   [
+                  "TriggerEvent_1_2_1_1_1_2_1_6/TriggerBlueprintEvent"
+               ]
+               __type   =   "BlueprintLibraryPipe"
+            }
+            HandleEvent_E1obCI7b   =   {
+               viewData   =   {
+                  x   =   10900
+                  y   =   5800
+               }
+               OnHandle   =   [
+                  "MeleeComboStrike_2/AddStrikeToCombo"
+               ]
+               eventUidRefParam   =   {
+                  def   =   "continue_light_tap_combo"
+                  __type   =   "StringRefParam"
+               }
+               __type   =   "BlueprintNodeHandleEvent"
+            }
+            ActivateForceFeedback_E6dfPd6G   =   {
+               viewData   =   {
+                  x   =   8750
+                  y   =   7050
+               }
+               nameRef   =   {
+                  def   =   "PowerswordSetPowerMode"
+                  __type   =   "StringRefParamForcefeedbackUid"
+               }
+               catalogRef   =   {
+                  def   =   "Powersword"
+                  __type   =   "StringRefParamForcefeedbackCatalog"
+               }
+               __type   =   "BlueprintNodeActivateForcefeedbackPreset"
+            }
+            ActivateForceFeedback_E6dfVs2R   =   {
+               viewData   =   {
+                  x   =   9400
+                  y   =   7050
+               }
+               nameRef   =   {
+                  def   =   "PowerswordSetSpeedMode"
+                  __type   =   "StringRefParamForcefeedbackUid"
+               }
+               catalogRef   =   {
+                  def   =   "Powersword"
+                  __type   =   "StringRefParamForcefeedbackCatalog"
+               }
+               __type   =   "BlueprintNodeActivateForcefeedbackPreset"
+            }
+            If_E7nfPdeZ   =   {
+               viewData   =   {
+                  x   =   6698.526
+                  y   =   6700
+               }
+               OnTrue   =   [
+                  "MeleeComboStrike_4/AddStrikeToCombo"
+               ]
+               OnFalse   =   [
+                  "BlueprintLibraryFunction_2/logic/nodes/If_2/Input"
+               ]
+               __type   =   "BlueprintNodeIf"
+            }
+         }
+         variables   =   {
+            speedMode   =   {
+               isPersistent   =   True
+               value   =   True
+               __type   =   "BlueprintVariableBool"
+            }
+            is_after_riposte_combo   =   {
+               __type   =   "BlueprintVariableBool"
+            }
+            is_ground_pound   =   {
+               __type   =   "BlueprintVariableBool"
+            }
+            is_combat_shield_charged   =   {
+               __type   =   "BlueprintVariableBool"
+            }
+            powerSlash1SD   =   {
+               value   =   0.33
+               __type   =   "BlueprintVariableFloat"
+            }
+            powerSlash2SD   =   {
+               value   =   0.33
+               __type   =   "BlueprintVariableFloat"
+            }
+            powerSlash3SD   =   {
+               value   =   0.33
+               __type   =   "BlueprintVariableFloat"
+            }
+            speedSlash1SD   =   {
+               value   =   0.33
+               __type   =   "BlueprintVariableFloat"
+            }
+            speedSlash2SD   =   {
+               value   =   0.33
+               __type   =   "BlueprintVariableFloat"
+            }
+            speedSlash3SD   =   {
+               value   =   0.33
+               __type   =   "BlueprintVariableFloat"
+            }
+            speedSlash4SD   =   {
+               value   =   0.33
+               __type   =   "BlueprintVariableFloat"
+            }
+            perkIsMeleeSlowTap   =   {
+               __type   =   "BlueprintVariableBool"
+            }
+            slowTapStanceDuration   =   {
+               value   =   3
+               __type   =   "BlueprintVariableFloat"
+            }
+            delayBeforeSlowTap   =   {
+               value   =   1
+               __type   =   "BlueprintVariableFloat"
+            }
+         }
+         groups   =   {
+            "Regular Attacks"   =   {
+               x   =   6300
+               y   =   5450
+               width   =   1900
+               height   =   600
+               comment   =   ""
+               isCollapsed   =   False
+               __type   =   "NodeGroup"
+            }
+            "Light Combo"   =   {
+               x   =   8400
+               y   =   5450
+               width   =   5800
+               height   =   2883.503
+               comment   =   ""
+               isCollapsed   =   False
+               __type   =   "NodeGroup"
+            }
+            "Special Attacks"   =   {
+               x   =   6300
+               y   =   6150
+               width   =   1950
+               height   =   1532
+               comment   =   ""
+               isCollapsed   =   False
+               __type   =   "NodeGroup"
+            }
+            "Falling Attack"   =   {
+               x   =   6400
+               y   =   6300
+               width   =   1700
+               height   =   350
+               comment   =   ""
+               isCollapsed   =   False
+               __type   =   "NodeGroup"
+            }
+            "Dash Attack"   =   {
+               x   =   6400
+               y   =   6700
+               width   =   1799.609
+               height   =   750
+               comment   =   ""
+               isCollapsed   =   False
+               __type   =   "NodeGroup"
+            }
+            "Combat Shield"   =   {
+               x   =   6450
+               y   =   7250
+               width   =   1400
+               height   =   400
+               comment   =   ""
+               isCollapsed   =   False
+               __type   =   "NodeGroup"
+            }
+            "Switch Style"   =   {
+               x   =   8400
+               y   =   8400
+               width   =   1650
+               height   =   487.9871
+               comment   =   ""
+               isCollapsed   =   False
+               __type   =   "NodeGroup"
+            }
+            Perk   =   {
+               x   =   8400
+               y   =   4850
+               width   =   1733
+               height   =   526
+               comment   =   ""
+               isCollapsed   =   False
+               __type   =   "NodeGroup"
+            }
+         }
+         sharedVariablesKeys   =   [
+            "speedMode",
+            "is_combat_shield_charged",
+            "perkIsMeleeSlowTap"
+         ]
+         __type   =   "BlueprintMeleeCombo"
+      }
+      __type   =   "MeleeComboBlueprintDesc"
+   }
+   strikeSettings   =   {
+      SlowLeft   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   10
+         strikeDirection   =   "UP"
+         constraintSettingsOverrides   =   {
+            MaxLinearSpeed   =   {
+               maxLinearSpeed   =   0
+               __type   =   "MeleeConstraintSettingsParamMaxLinearSpeed"
+            }
+            ConstraintWeight   =   {
+               constraintWeight   =   0
+               __type   =   "MeleeConstraintSettingsParamConstraintWeight"
+            }
+         }
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordPowerToSpeed_v2_Left"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            DamageShake   =   {
+               damageShakeUid   =   "PowerswordPowerHit"
+               __type   =   "MeleePlayerSettingsParamDamageShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordPowerToSpeed_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordSpeedToPowerSlash"
+            __type   =   "AnimTableLink"
+         }
+         meleeDetectors   =   [
+            "LongRightHandPower"
+         ]
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   500
+            healthDmgPercent   =   180
+            heavyHitDmgPercent   =   200
+            canKnockback   =   True
+            isGuardbreak   =   False
+            isPervasive   =   True
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         extraDamages   =   {
+            melee_extra_damage   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  sslModule   =   "damage.damager.damager_description_link"
+                  damagerDescUid   =   "melee_cone_long_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   500
+               healthDmgPercent   =   180
+               heavyHitDmgPercent   =   200
+               canKnockback   =   True
+               isPervasive   =   True
+               knockbackAngle   =   15
+               radiusScale   =   10
+               damageLocator   =   "Trajectory"
+               damageOffset   =   {
+                  y   =   1.5
+                  z   =   0
+                  __type   =   "Vector3d"
+               }
+               __type   =   "MeleeExtraDamageSettings"
+            }
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      SlowRight   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   10
+         strikeDirection   =   "UP"
+         constraintSettingsOverrides   =   {
+            MaxLinearSpeed   =   {
+               maxLinearSpeed   =   0
+               __type   =   "MeleeConstraintSettingsParamMaxLinearSpeed"
+            }
+            ConstraintWeight   =   {
+               constraintWeight   =   0
+               __type   =   "MeleeConstraintSettingsParamConstraintWeight"
+            }
+         }
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordPowerToSpeed_v2_Right"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            DamageShake   =   {
+               damageShakeUid   =   "PowerswordPowerHit"
+               __type   =   "MeleePlayerSettingsParamDamageShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordPowerToSpeed_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordPowerToSpeedSlash"
+            __type   =   "AnimTableLink"
+         }
+         meleeDetectors   =   [
+            "LongRightHandPower"
+         ]
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   500
+            healthDmgPercent   =   180
+            heavyHitDmgPercent   =   200
+            canKnockback   =   True
+            isGuardbreak   =   False
+            isPervasive   =   True
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         extraDamages   =   {
+            melee_extra_damage   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  sslModule   =   "damage.damager.damager_description_link"
+                  damagerDescUid   =   "melee_cone_long_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   500
+               healthDmgPercent   =   180
+               heavyHitDmgPercent   =   200
+               canKnockback   =   True
+               isPervasive   =   True
+               knockbackAngle   =   15
+               radiusScale   =   10
+               damageLocator   =   "Trajectory"
+               damageOffset   =   {
+                  y   =   1.5
+                  z   =   0
+                  __type   =   "Vector3d"
+               }
+               __type   =   "MeleeExtraDamageSettings"
+            }
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      PowerDashSlash   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   10
+         strikeDirection   =   "LEFT"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordPowerDash_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            DamageShake   =   {
+               damageShakeUid   =   "PowerswordPowerHit"
+               __type   =   "MeleePlayerSettingsParamDamageShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordPowerDash_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordPowerDodgeSlash"
+            __type   =   "AnimTableLink"
+         }
+         meleeDetectors   =   [
+            "LongRightHand"
+         ]
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   500
+            healthDmgPercent   =   50
+            heavyHitDmgPercent   =   200
+            canKnockback   =   True
+            isGuardbreak   =   False
+            isPervasive   =   True
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      SpeedDashSlash   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   10
+         strikeDirection   =   "CENTRE"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordSpeedDash_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordSpeedDash_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordSpeedDodgeSlash"
+            __type   =   "AnimTableLink"
+         }
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   500
+            healthDmgPercent   =   50
+            heavyHitDmgPercent   =   200
+            canKnockback   =   True
+            isGuardbreak   =   False
+            isPervasive   =   True
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         extraDamages   =   {
+            melee_extra_damage   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  sslModule   =   "damage.damager.damager_description_link"
+                  damagerDescUid   =   "melee_sphere_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   500
+               healthDmgPercent   =   50
+               heavyHitDmgPercent   =   200
+               canKnockback   =   True
+               isGuardbreak   =   False
+               isPervasive   =   True
+               knockbackAngle   =   15
+               radiusScale   =   1
+               damageLocator   =   "Trajectory"
+               damageOffset   =   {
+                  y   =   1.5
+                  z   =   0
+                  __type   =   "Vector3d"
+               }
+               __type   =   "MeleeExtraDamageSettings"
+            }
+            melee_extra_damage_1   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  sslModule   =   "damage.damager.damager_description_link"
+                  damagerDescUid   =   "melee_cone_long_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   500
+               healthDmgPercent   =   50
+               heavyHitDmgPercent   =   200
+               canKnockback   =   True
+               isGuardbreak   =   False
+               isPervasive   =   True
+               knockbackAngle   =   15
+               radiusScale   =   10
+               damageLocator   =   "Trajectory"
+               damageOffset   =   {
+                  y   =   1.5
+                  z   =   0
+                  __type   =   "Vector3d"
+               }
+               __type   =   "MeleeExtraDamageSettings"
+            }
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      PowerSlash1   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   10
+         strikeDirection   =   "LEFT"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordPowerLight1_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            DamageShake   =   {
+               damageShakeUid   =   "PowerswordPowerHit"
+               __type   =   "MeleePlayerSettingsParamDamageShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordPowerLight1_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordPowerSlash1"
+            __type   =   "AnimTableLink"
+         }
+         meleeDetectors   =   [
+            "LongRightHand"
+         ]
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   500
+            healthDmgPercent   =   100
+            heavyHitDmgPercent   =   100
+            canKnockback   =   True
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      PowerSlash2   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   11
+         strikeDirection   =   "RIGHT"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordPowerLight2_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            DamageShake   =   {
+               damageShakeUid   =   "PowerswordPowerHit"
+               __type   =   "MeleePlayerSettingsParamDamageShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordPowerLight2_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordPowerSlash2"
+            __type   =   "AnimTableLink"
+         }
+         meleeDetectors   =   [
+            "LongRightHand"
+         ]
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   500
+            healthDmgPercent   =   100
+            heavyHitDmgPercent   =   100
+            canKnockback   =   True
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      PowerSlash3   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   12
+         strikeDirection   =   "RIGHT"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordPowerLight3_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            DamageShake   =   {
+               damageShakeUid   =   "PowerswordPowerHit"
+               __type   =   "MeleePlayerSettingsParamDamageShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordPowerLight3_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordPowerSlash3"
+            __type   =   "AnimTableLink"
+         }
+         meleeDetectors   =   [
+            "LongRightHand"
+         ]
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   500
+            healthDmgPercent   =   100
+            heavyHitDmgPercent   =   100
+            canKnockback   =   True
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         extraDamages   =   {
+            melee_extra_damage   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  sslModule   =   "damage.damager.damager_description_link"
+                  damagerDescUid   =   "melee_cone_long_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   500
+               healthDmgPercent   =   50
+               heavyHitDmgPercent   =   100
+               canKnockback   =   True
+               knockbackAngle   =   15
+               radiusScale   =   10
+               damageLocator   =   "Trajectory"
+               damageOffset   =   {
+                  y   =   1.5
+                  z   =   0
+                  __type   =   "Vector3d"
+               }
+               __type   =   "MeleeExtraDamageSettings"
+            }
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      SpeedSlash1   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   5
+         strikeDirection   =   "RIGHT"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordSpeedLight1_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordSpeedLight1_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordSpeedSlash1"
+            __type   =   "AnimTableLink"
+         }
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   200
+            healthDmgPercent   =   100
+            heavyHitDmgPercent   =   100
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      SpeedSlash2   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   5
+         strikeDirection   =   "LEFT"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordSpeedLight2_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordSpeedLight2_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordSpeedSlash2"
+            __type   =   "AnimTableLink"
+         }
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   200
+            healthDmgPercent   =   110
+            heavyHitDmgPercent   =   100
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      SpeedSlash3   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   6
+         strikeDirection   =   "CENTRE"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordSpeedLight3_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordSpeedLight3_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordSpeedSlash3"
+            __type   =   "AnimTableLink"
+         }
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   200
+            healthDmgPercent   =   120
+            heavyHitDmgPercent   =   100
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      SpeedSlash4   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   6
+         strikeDirection   =   "CENTRE"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordSpeedLight4_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordSpeedLight4_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordSpeedSlash4"
+            __type   =   "AnimTableLink"
+         }
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   500
+            healthDmgPercent   =   120
+            heavyHitDmgPercent   =   100
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         extraDamages   =   {
+            melee_extra_damage   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  sslModule   =   "damage.damager.damager_description_link"
+                  damagerDescUid   =   "melee_cone_long_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   500
+               healthDmgPercent   =   120
+               heavyHitDmgPercent   =   100
+               canKnockback   =   False
+               knockbackAngle   =   15
+               radiusScale   =   10
+               damageLocator   =   "Trajectory"
+               damageOffset   =   {
+                  y   =   1.5
+                  z   =   0
+                  __type   =   "Vector3d"
+               }
+               __type   =   "MeleeExtraDamageSettings"
+            }
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      FallingAttack   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   15
+         strikeDirection   =   "DOWN"
+         constraintSettingsOverrides   =   {
+            ConstraintOffset   =   {
+               __type   =   "MeleeConstraintSettingsParamConstraintOffset"
+            }
+            MaxLinearSpeed   =   {
+               __type   =   "MeleeConstraintSettingsParamMaxLinearSpeed"
+            }
+         }
+         playerSettingsOverrides   =   {
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordFallingAttack"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            link   =   "Primaris.Melee.PowerSwordJumpDownSlash"
+            __type   =   "AnimTableLink"
+         }
+         meleeDetectors   =   [  ]
+         mainDamage   =   {
+            damagerLink   =   {
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   40
+            healthDmgPercent   =   100
+            heavyHitDmgPercent   =   200
+            canKnockback   =   True
+            knockbackAngle   =   10
+            __type   =   "MeleeDamageSettings"
+         }
+         extraDamages   =   {
+            melee_extra_damage   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  damagerDescUid   =   "melee_sphere_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   500
+               healthDmgPercent   =   200
+               heavyHitDmgPercent   =   100
+               canKnockback   =   True
+               knockbackAngle   =   10
+               radiusScale   =   3
+               damageLocator   =   "Trajectory"
+               __type   =   "MeleeExtraDamageSettings"
+            }
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      CombatShield1   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   10
+         strikeDirection   =   "CENTRE"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "ShieldBash"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.ShieldBash1"
+            __type   =   "AnimTableLink"
+         }
+         meleeDetectors   =   [
+            "LeftHand"
+         ]
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   200
+            healthDmgPercent   =   50
+            heavyHitDmgPercent   =   100
+            isGuardbreak   =   False
+            isPervasive   =   True
+            knockbackAngle   =   13
+            radiusScale   =   3
+            __type   =   "MeleeDamageSettings"
+         }
+         extraDamages   =   {
+            melee_extra_damage   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  sslModule   =   "damage.damager.damager_description_link"
+                  damagerDescUid   =   "melee_cone_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   200
+               healthDmgPercent   =   50
+               heavyHitDmgPercent   =   100
+               isPervasive   =   True
+               knockbackAngle   =   15
+               radiusScale   =   2
+               damageLocator   =   "Trajectory"
+               damageOffset   =   {
+                  y   =   1.5
+                  z   =   0
+                  __type   =   "Vector3d"
+               }
+               __type   =   "MeleeExtraDamageSettings"
+            }
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      PerkPowerSlash4   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   12
+         strikeDirection   =   "RIGHT"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordPerkPowerSlash4"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            DamageShake   =   {
+               damageShakeUid   =   "PowerswordPowerHit"
+               __type   =   "MeleePlayerSettingsParamDamageShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordPerkPowerSlash4"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordPowerSlash4"
+            __type   =   "AnimTableLink"
+         }
+         meleeDetectors   =   [
+            "LongRightHand"
+         ]
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   900
+            healthDmgPercent   =   130
+            heavyHitDmgPercent   =   100
+            canKnockback   =   True
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         extraDamages   =   {
+            melee_extra_damage   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  sslModule   =   "damage.damager.damager_description_link"
+                  damagerDescUid   =   "melee_cone_long_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   900
+               healthDmgPercent   =   50
+               heavyHitDmgPercent   =   100
+               canKnockback   =   True
+               knockbackAngle   =   15
+               radiusScale   =   10
+               damageLocator   =   "Trajectory"
+               damageOffset   =   {
+                  y   =   1.5
+                  z   =   0
+                  __type   =   "Vector3d"
+               }
+               __type   =   "MeleeExtraDamageSettings"
+            }
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      PerkSpeedSlash5   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   6
+         strikeDirection   =   "CENTRE"
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordPerkSpeedSlash5"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordPerkSpeedSlash5"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordSpeedSlash5"
+            __type   =   "AnimTableLink"
+         }
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   900
+            healthDmgPercent   =   120
+            heavyHitDmgPercent   =   100
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         extraDamages   =   {
+            melee_extra_damage   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  sslModule   =   "damage.damager.damager_description_link"
+                  damagerDescUid   =   "melee_cone_long_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   900
+               healthDmgPercent   =   120
+               heavyHitDmgPercent   =   100
+               canKnockback   =   False
+               knockbackAngle   =   15
+               radiusScale   =   10
+               damageLocator   =   "Trajectory"
+               damageOffset   =   {
+                  y   =   1.5
+                  z   =   0
+                  __type   =   "Vector3d"
+               }
+               __type   =   "MeleeExtraDamageSettings"
+            }
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      SlowLeft2   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   20
+         strikeDirection   =   "RIGHT"
+         constraintSettingsOverrides   =   {
+            MaxLinearSpeed   =   {
+               maxLinearSpeed   =   0
+               __type   =   "MeleeConstraintSettingsParamMaxLinearSpeed"
+            }
+            ConstraintWeight   =   {
+               constraintWeight   =   0
+               __type   =   "MeleeConstraintSettingsParamConstraintWeight"
+            }
+         }
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordSlowLeft2_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            DamageShake   =   {
+               damageShakeUid   =   "PowerswordPowerHit"
+               __type   =   "MeleePlayerSettingsParamDamageShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordSlowLeft2_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordSpeedToPowerSlash2"
+            __type   =   "AnimTableLink"
+         }
+         meleeDetectors   =   [
+            "LongRightHandPower"
+         ]
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   300
+            healthDmgPercent   =   200
+            heavyHitDmgPercent   =   200
+            canKnockback   =   False
+            isGuardbreak   =   False
+            isPervasive   =   True
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         extraDamages   =   {
+            melee_extra_damage   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  sslModule   =   "damage.damager.damager_description_link"
+                  damagerDescUid   =   "melee_sphere_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   900
+               healthDmgPercent   =   200
+               heavyHitDmgPercent   =   200
+               canKnockback   =   True
+               isPervasive   =   True
+               knockbackAngle   =   15
+               radiusScale   =   5
+               damageLocator   =   "Trajectory"
+               damageOffset   =   {
+                  y   =   1.5
+                  z   =   0
+                  __type   =   "Vector3d"
+               }
+               __type   =   "MeleeExtraDamageSettings"
+            }
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+      SlowRight2   =   {
+         sslModule   =   "weapons.controllers.melee_controller.combo.melee_combo_strike_settings"
+         maxDamagedActors   =   20
+         strikeDirection   =   "LEFT"
+         constraintSettingsOverrides   =   {
+            MaxLinearSpeed   =   {
+               maxLinearSpeed   =   0
+               __type   =   "MeleeConstraintSettingsParamMaxLinearSpeed"
+            }
+            ConstraintWeight   =   {
+               constraintWeight   =   0
+               __type   =   "MeleeConstraintSettingsParamConstraintWeight"
+            }
+         }
+         playerSettingsOverrides   =   {
+            StrikeShake   =   {
+               strikeShakeUid   =   "PowerswordSlowRight2_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeShake"
+            }
+            DamageShake   =   {
+               damageShakeUid   =   "PowerswordPowerHit"
+               __type   =   "MeleePlayerSettingsParamDamageShake"
+            }
+            StrikeForceFeedback   =   {
+               strikeForceFeedbackUid   =   "PowerswordSlowRight2_v2"
+               __type   =   "MeleePlayerSettingsParamStrikeForceFeedback"
+            }
+         }
+         animLink   =   {
+            sslModule   =   "animation.animation_table"
+            link   =   "Primaris.Melee.PowerSwordPowerToSpeedSlash2"
+            __type   =   "AnimTableLink"
+         }
+         meleeDetectors   =   [
+            "LongRightHandPower"
+         ]
+         mainDamage   =   {
+            sslModule   =   "weapons.controllers.melee_controller.combo.strike_damage_settings"
+            damagerLink   =   {
+               sslModule   =   "damage.damager.damager_description_link"
+               damagerDescUid   =   "melee_point_damager"
+               __type   =   "DamagerDescriptionLink"
+            }
+            impulse   =   300
+            healthDmgPercent   =   200
+            heavyHitDmgPercent   =   200
+            canKnockback   =   False
+            isGuardbreak   =   False
+            isPervasive   =   True
+            knockbackAngle   =   13
+            __type   =   "MeleeDamageSettings"
+         }
+         extraDamages   =   {
+            melee_extra_damage   =   {
+               sslModule   =   "weapons.controllers.melee_controller.combo.strike_extra_damage_settings"
+               damagerLink   =   {
+                  sslModule   =   "damage.damager.damager_description_link"
+                  damagerDescUid   =   "melee_sphere_damager"
+                  __type   =   "DamagerDescriptionLink"
+               }
+               impulse   =   900
+               healthDmgPercent   =   200
+               heavyHitDmgPercent   =   200
+               canKnockback   =   True
+               isPervasive   =   True
+               knockbackAngle   =   15
+               radiusScale   =   5
+               damageLocator   =   "Trajectory"
+               damageOffset   =   {
+                  y   =   1.5
+                  z   =   0
+                  __type   =   "Vector3d"
+               }
+               __type   =   "MeleeExtraDamageSettings"
+            }
+         }
+         __type   =   "MeleeComboStrikeSettings"
+      }
+   }
+   abortAnimLink   =   {
+      sslModule   =   "animation.animation_table"
+      link   =   "Primaris.Melee.Abort"
+      __type   =   "AnimTableLink"
+   }
+   __type   =   "MeleeComboDesc"
+}
+__type   =   "MeleeDesc"
