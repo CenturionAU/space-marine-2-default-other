@@ -28,11 +28,15 @@ Enjoy your new values.
 
 ---
 
+### Known Issues
+- Health injector does not fully restore player health.
+
+---
+
 ### Changelogs
 #### v1.0.0
 ~ssl/damage/damagable/damage_points_restoring/damagable_health_restoring_library_pve.sso
-- [[BUG REPORT]](https://github.com/CenturionAU/space-marine-2-modded-values/issues/1)
-  Health injectors now fully restore the player's health.
+- Health injectors now fully restore the player's health.
 - Executions now restore a small amount of player health, regardless of player contested health.
     - Common enemies restore 5% of health.
     - Elite and special enemies restore 10% of health.
