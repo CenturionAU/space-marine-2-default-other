@@ -8,7 +8,7 @@ Modification of local files is not supported by Saber Interactive and doing so c
 ---
 
 ### Changelogs
-30-Sep-2024
+30-Sep-2024  
 ~ssl/damage/damagable/damage_points_restoring/damagable_health_restoring_library_pve.sso
 - Health injectors now fully restore the player's health.
 - Executions now restore a small amount of player health, regardless of player contested health.
