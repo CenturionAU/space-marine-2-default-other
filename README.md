@@ -9,6 +9,16 @@ This repo serves as a means of storing and sharing my preferred modified values 
 
 ---
 
+### Specific Changes
+- All player ranged weapons do 10x damage.
+- All player ranged weapons have no spread.
+- All player melee weapons do 10x damage.
+- All player melee weapons have zero delay between each attack in their combo, resulting in master melee
+  attacks.
+- Executions restore a percentage of player health regardless of contested health.
+
+---
+
 ### Installation Instructions
 Big thanks to MegaDux for sharing this method.  
 You will need to source your own EAC bypass.
@@ -24,32 +34,4 @@ You will need to source your own EAC bypass.
 8. Drag the ssl folder from the downloaded .zip into default_other.pak.
 9. Select OK.
 
-Enjoy your new values.
-
----
-
-### Known Issues
-- Health injector does not fully restore player health.
-
----
-
-### Changelogs
-#### v1.0.0
-~ssl/damage/damagable/damage_points_restoring/damagable_health_restoring_library_pve.sso
-- Health injectors now fully restore the player's health.
-- Executions now restore a small amount of player health, regardless of player contested health.
-    - Common enemies restore 5% of health.
-    - Elite and special enemies restore 10% of health.
-    - Miniboss enemies restore 15% of health.
-    - Boss enemies restore 20% of health.
-
-~ssl/weapons/creator/firearm_library_pve.sso
-- All player ranged weapons have had their spread reduced to 0.
-- All player ranged weapons have had their damage increased by 100%.
-
-~ssl/weapons/melee/weapon_descriptions/melee_weapon_descs/
-- All player melee weapons have had the delay between attacks removed, meaning all player melee weapons
-  now attack faster.
-    - The speed of the individual attacks themselves remain the same but the player character no longer
-      has a small delay in between each swing.
-- All player melee weapons have had their damage increased by 100%.
+You should then be able to launch your game with these modified values.
