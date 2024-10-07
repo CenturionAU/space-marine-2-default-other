@@ -10,9 +10,9 @@ This repo serves as a means of storing and sharing my preferred modified values 
 ---
 
 ### Specific Changes
-- All player ranged weapons do 10x damage.
+- All player ranged weapons do 2x damage.
 - All player ranged weapons have no spread.
-- All player melee weapons do 10x damage.
+- All player melee weapons do 2x damage.
 - All player melee weapons have zero delay between each attack in their combo, resulting in master melee
   attacks.
 - Executions restore a percentage of player health regardless of contested health.
